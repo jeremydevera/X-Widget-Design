@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcode · dynamic island</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class="stage">
+
+  <header class="stage-head">
+    <div class="brand"><span class="caret">▸</span><span class="logo-name">xcode</span></div>
+    <div class="stage-meta">
+      <span class="m-pair"><span class="k">target</span><span class="v">iPhone 14 Pro+</span></span>
+      <span class="badge"><span class="dot"></span>live</span>
+    </div>
+    <div class="hint">scroll the list · preview follows · apply to your dynamic island</div>
+  </header>
+
+  <div class="iphone">
+    <div class="screen">
+
+      <!-- Status bar -->
+      <div class="statusbar">
+        <span id="clock">9:41</span>
+        <div class="right">
+          <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7h2v2H1zM5 5h2v4H5zM9 3h2v6H9zM13 1h2v8h-2z" fill="currentColor"/></svg>
+          <svg width="14" height="10" viewBox="0 0 14 10"><path d="M7 8.5C4.5 8.5 2.3 7.5.5 5.8l1-1.1C3 6.2 4.9 7 7 7s4-.8 5.5-2.3l1 1.1C11.7 7.5 9.5 8.5 7 8.5z" fill="currentColor"/></svg>
+          <svg width="24" height="11" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="20" height="10" rx="2" stroke="currentColor" fill="none"/><rect x="2" y="2" width="14" height="7" fill="currentColor"/><rect x="21" y="3.5" width="1.5" height="4" fill="currentColor"/></svg>
+        </div>
+      </div>
+
+      <!-- The actual Dynamic Island (live, mirrors focused design) -->
+      <div id="island" class="island"></div>
+
+      <!-- Single page · preview on top, scroll list on bottom -->
+      <section class="screen-body">
+
+        <!-- ━━━ Sticky preview area ━━━ -->
+        <div class="preview-area">
+          <div class="preview-head">
+            <div class="ph-left">
+              <span class="ph-k" id="preview-name">—</span>
+              <span class="ph-cat" id="preview-cat">—</span>
+            </div>
+            <span class="ph-meta">
+              <span id="active-state" class="state-tag">PREVIEWING</span>
+            </span>
+          </div>
+
+          <!-- Phone-top preview render -->
+          <div class="preview-frame">
+            <div class="preview-screen">
+              <div id="preview-island" class="preview-island"></div>
+            </div>
+          </div>
+
+          <!-- SHORT / LONG toggle + apply -->
+          <div class="action-bar">
+            <div class="size-toggle" id="size-toggle">
+              <button class="on" data-size="short">SHORT</button>
+              <button data-size="long">LONG</button>
+            </div>
+            <button class="apply-btn" id="apply-btn">apply</button>
+          </div>
+        </div>
+
+        <!-- ━━━ Scrollable design list ━━━ -->
+        <div class="list-wrap">
+          <div class="list-head">
+            <span>ALL DESIGNS</span>
+            <span class="r"><span id="list-count">12</span> · scroll to preview</span>
+          </div>
+          <div class="filter-chips" id="filter-chips"></div>
+          <div id="design-list" class="design-list">
+            <!-- rendered by JS -->
+            <div class="list-spacer-bottom"></div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>xcode · dynamic island metrics — v0.1 mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="canvas">
+
+  <!-- ───────── Deck header ───────── -->
+  <header class="deck-head">
+    <div class="brand">
+      <div class="logo"><span class="caret">▸</span>xcode</div>
+      <div class="tagline">live system metrics in the dynamic island · v0.1 mockup</div>
+    </div>
+    <div></div>
+    <div class="deck-meta">
+      <div class="pair"><span class="k">target</span><span class="v">iOS 17+ · iPhone 14 Pro+</span></div>
+      <div class="pair"><span class="k">variant</span><span class="v">B · pro/dev</span></div>
+      <div class="pair"><span class="k">build</span><span class="v">0001.a3f</span></div>
+      <div class="live"><span class="dot"></span>HI-FI MOCK</div>
+    </div>
+  </header>
+
+  <!-- ───────── Assumptions strip ───────── -->
+  <section class="assumptions">
+    <div class="section-title"><span class="num">00</span><span>assumptions / open questions</span><span class="rule"></span></div>
+    <div class="assumption-grid">
+      <div class="ass">
+        <div class="ass-k">name</div>
+        <div class="ass-v"><code>xcode</code> — note: this is Apple's IDE trademark since 2003. fine for prototyping, must change for App Store. swap when ready.</div>
+      </div>
+      <div class="ass">
+        <div class="ass-k">audience</div>
+        <div class="ass-v">power users / iOS devs / streamers. comfortable with <code>system.cpu</code> namespacing &amp; tabular numerics.</div>
+      </div>
+      <div class="ass">
+        <div class="ass-k">island slots</div>
+        <div class="ass-v"><code>L1 L2 R1 R2</code> — 4 mappable positions. compact = 1 metric, split = 2 (one per side).</div>
+      </div>
+      <div class="ass">
+        <div class="ass-k">data shape</div>
+        <div class="ass-v">all metrics expose <code>{value, unit, threshold, trend}</code>. sparkline = last 60s @ 1Hz sample.</div>
+      </div>
+      <div class="ass">
+        <div class="ass-k">aesthetic guard</div>
+        <div class="ass-v">monochrome only. no hue at all. state encoded by brightness + glyphs (▲) + inverted-pill (white-on-black → black-on-white for crit). no glassmorphism, no emoji.</div>
+      </div>
+      <div class="ass">
+        <div class="ass-k">scope cut</div>
+        <div class="ass-v">live activity is the only surface in v1. lock screen widgets / home widgets = v2.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Phone deck ───────── -->
+  <section class="phones">
+
+    <!-- ════════════════════ PHONE 1 · HOME / PREVIEW + SCROLLABLE LIST ════════════════════ -->
+    <div class="phone-cell">
+      <div class="phone-label">
+        <span class="idx">01</span><span class="name">home · preview + select</span>
+        <span class="desc">tap row to toggle · scrolls</span>
+      </div>
+      <div class="iphone">
+        <div class="screen home-screen">
+
+          <!-- Status bar -->
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="right">
+              <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7h2v2H1zM5 5h2v4H5zM9 3h2v6H9zM13 1h2v8h-2z" fill="currentColor"/></svg>
+              <svg width="14" height="10" viewBox="0 0 14 10"><path d="M7 8.5C4.5 8.5 2.3 7.5.5 5.8l1-1.1C3 6.2 4.9 7 7 7s4-.8 5.5-2.3l1 1.1C11.7 7.5 9.5 8.5 7 8.5z" fill="currentColor"/></svg>
+              <svg width="24" height="11" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="20" height="10" rx="2" stroke="currentColor" fill="none"/><rect x="2" y="2" width="14" height="7" fill="currentColor"/><rect x="21" y="3.5" width="1.5" height="4" fill="currentColor"/></svg>
+            </div>
+          </div>
+
+          <!-- Dynamic Island · split state (the actual one) -->
+          <div class="island split-wide">
+            <div class="pill">
+              <span class="lbl">cpu</span>
+              <span class="val">42</span>
+              <span class="unit">%</span>
+            </div>
+            <div class="pill warn">
+              <span class="lbl">fps</span>
+              <span class="val">58</span>
+              <span class="unit">/120</span>
+            </div>
+          </div>
+
+          <!-- ═══ STICKY PREVIEW STAGE ═══ -->
+          <section class="preview-stage">
+            <div class="preview-head">
+              <span class="ph-k">PREVIEW · LIVE</span>
+              <span class="ph-meta"><span class="live-dot"></span> 1Hz</span>
+            </div>
+
+            <!-- Stylized iPhone top with enlarged island -->
+            <div class="preview-frame">
+              <div class="preview-screen">
+                <div class="preview-island">
+                  <div class="ppill">
+                    <span class="lbl">cpu</span>
+                    <span class="val">42</span>
+                    <span class="unit">%</span>
+                  </div>
+                  <div class="ppill warn">
+                    <span class="lbl">fps</span>
+                    <span class="val">58</span>
+                    <span class="unit">/120</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slot map: 4 chips -->
+            <div class="slot-map">
+              <div class="smap-cell on"><span class="smap-k">L1</span><span class="smap-v">system.cpu</span></div>
+              <div class="smap-cell on"><span class="smap-k">L2</span><span class="smap-v">temp.cpu</span></div>
+              <div class="smap-cell on"><span class="smap-k">R1</span><span class="smap-v">fps</span></div>
+              <div class="smap-cell on"><span class="smap-k">R2</span><span class="smap-v">memory</span></div>
+            </div>
+          </section>
+
+          <!-- ═══ SCROLLABLE METRIC LIST ═══ -->
+          <section class="scroll-list">
+
+            <div class="scroll-head">
+              <span>ACTIVE · 4/4</span>
+              <span class="r">tap to remove</span>
+            </div>
+
+            <div class="srow on">
+              <span class="srow-tog">[L1]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">system.</span>cpu</div>
+                <div class="srow-sub">42% · all cores</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,9 4,7 8,10 12,6 16,8 20,4 24,7 28,3 32,6 36,2 40,5" stroke="#fafafa" stroke-opacity="0.85" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow on">
+              <span class="srow-tog">[L2]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">sensors.</span>temp.cpu</div>
+                <div class="srow-sub">38.2°C · soc thermal</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,11 4,10 8,11 12,9 16,10 20,8 24,9 28,7 32,8 36,6 40,7" stroke="#fafafa" stroke-opacity="0.55" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow on">
+              <span class="srow-tog">[R1]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">graphics.</span>fps</div>
+                <div class="srow-sub warn">▲ 58/120 · target 120hz</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,5 4,6 8,4 12,7 16,9 20,8 24,10 28,11 32,9 36,12 40,11" stroke="#fafafa" stroke-opacity="0.85" stroke-width="1" fill="none" stroke-dasharray="2 1"/>
+              </svg>
+            </div>
+
+            <div class="srow on">
+              <span class="srow-tog">[R2]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">memory.</span>used</div>
+                <div class="srow-sub">3.4 GB · resident</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,7 4,8 8,7 12,9 16,7 20,8 24,6 28,8 32,7 36,9 40,7" stroke="#fafafa" stroke-opacity="0.55" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="scroll-head">
+              <span>AVAILABLE · 11</span>
+              <span class="r">tap to add</span>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">system.</span>load_avg</div>
+                <div class="srow-sub">1.24 · 1m / 5m / 15m</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,8 4,9 8,7 12,8 16,7 20,9 24,8 28,9 32,7 36,8 40,8" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">memory.</span>pressure</div>
+                <div class="srow-sub">nominal · vm subsystem</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,10 4,10 8,10 12,9 16,10 20,9 24,10 28,10 32,9 36,10 40,10" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">graphics.</span>frame_time</div>
+                <div class="srow-sub">17.2 ms · last frame</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,8 4,7 8,9 12,6 16,8 20,5 24,7 28,4 32,8 36,5 40,7" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">graphics.</span>gpu</div>
+                <div class="srow-sub">61% · render util</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,6 4,5 8,7 12,4 16,6 20,3 24,5 28,4 32,6 36,3 40,5" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">sensors.</span>temp.battery</div>
+                <div class="srow-sub">31.8°C · cell pack</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,9 4,9 8,8 12,9 16,8 20,8 24,7 28,8 32,7 36,7 40,6" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">power.</span>watt_draw</div>
+                <div class="srow-sub">3.2 W · system avg</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,7 4,8 8,6 12,9 16,5 20,8 24,7 28,9 32,6 36,8 40,7" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">disk.</span>iops</div>
+                <div class="srow-sub">340 · read+write/s</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,9 4,7 8,10 12,5 16,9 20,4 24,8 28,3 32,8 36,5 40,7" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">network.</span>down</div>
+                <div class="srow-sub">2.1 Mbps · wifi rx</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,8 4,9 8,7 12,10 16,6 20,9 24,5 28,8 32,7 36,9 40,6" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">network.</span>up</div>
+                <div class="srow-sub">142 Kbps · wifi tx</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,9 4,9 8,10 12,8 16,9 20,9 24,10 28,8 32,9 36,9 40,10" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">network.</span>latency</div>
+                <div class="srow-sub">14 ms · ping rtt</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,9 4,8 8,9 12,7 16,9 20,8 24,9 28,7 32,9 36,8 40,9" stroke="#fafafa" stroke-opacity="0.35" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="srow">
+              <span class="srow-tog off">[ + ]</span>
+              <div class="srow-body">
+                <div class="srow-id"><span class="ns">battery.</span>level</div>
+                <div class="srow-sub">87% · charging</div>
+              </div>
+              <svg class="srow-spark" viewBox="0 0 40 14" preserveAspectRatio="none">
+                <polyline points="0,8 4,7 8,7 12,6 16,6 20,5 24,5 28,4 32,4 36,3 40,3" stroke="#fafafa" stroke-opacity="0.55" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="scroll-fade"></div>
+          </section>
+
+          <!-- Tab bar -->
+          <div class="tabbar">
+            <div class="tab active"><span class="glyph">▸</span><span>HOME</span></div>
+            <div class="tab"><span class="glyph">+</span><span>BROWSE</span></div>
+            <div class="tab"><span class="glyph">∿</span><span>HISTORY</span></div>
+            <div class="tab"><span class="glyph">⌥</span><span>CONFIG</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════ PHONE 2 · ADD PROBE / BROWSE ════════════════════ -->
+    <div class="phone-cell">
+      <div class="phone-label">
+        <span class="idx">02</span><span class="name">browse · full catalog</span>
+        <span class="desc">filtered view · 15 probes</span>
+      </div>
+      <div class="iphone">
+        <div class="screen">
+
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="right">
+              <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7h2v2H1zM5 5h2v4H5zM9 3h2v6H9zM13 1h2v8h-2z" fill="currentColor"/></svg>
+              <svg width="14" height="10" viewBox="0 0 14 10"><path d="M7 8.5C4.5 8.5 2.3 7.5.5 5.8l1-1.1C3 6.2 4.9 7 7 7s4-.8 5.5-2.3l1 1.1C11.7 7.5 9.5 8.5 7 8.5z" fill="currentColor"/></svg>
+              <svg width="24" height="11" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="20" height="10" rx="2" stroke="currentColor" fill="none"/><rect x="2" y="2" width="14" height="7" fill="currentColor"/><rect x="21" y="3.5" width="1.5" height="4" fill="currentColor"/></svg>
+            </div>
+          </div>
+
+          <!-- Compact island during browse -->
+          <div class="island compact"></div>
+
+          <div class="body">
+            <div class="app-head">
+              <div class="title"><span class="caret">▸</span> browse</div>
+              <div class="meta"><span>15 probes · 4 cat</span></div>
+            </div>
+
+            <!-- Search -->
+            <div class="search">
+              <span class="prompt">/</span>
+              <span class="placeholder">filter probes…</span>
+              <span class="caret-blink">▌</span>
+            </div>
+
+            <!-- Category strip -->
+            <div class="cat-strip">
+              <div class="chip active">all <span class="n">15</span></div>
+              <div class="chip">system <span class="n">5</span></div>
+              <div class="chip">graphics <span class="n">3</span></div>
+              <div class="chip">net <span class="n">4</span></div>
+              <div class="chip">sensors <span class="n">3</span></div>
+            </div>
+
+            <!-- Catalog list -->
+            <div class="cat-section">
+              <div class="cat-head">— SYSTEM —</div>
+
+              <div class="cat-row in-use">
+                <div class="cat-id"><span class="ns">system.</span>cpu</div>
+                <div class="cat-state">in_use · L1</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">system.</span>load_avg</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">memory.</span>pressure</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+              <div class="cat-row in-use">
+                <div class="cat-id"><span class="ns">memory.</span>used</div>
+                <div class="cat-state">in_use · R2</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">disk.</span>iops</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+
+              <div class="cat-head">— GRAPHICS —</div>
+
+              <div class="cat-row in-use">
+                <div class="cat-id"><span class="ns">graphics.</span>fps</div>
+                <div class="cat-state">in_use · R1</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">graphics.</span>frame_time</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">graphics.</span>gpu</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+
+              <div class="cat-head">— SENSORS —</div>
+
+              <div class="cat-row in-use">
+                <div class="cat-id"><span class="ns">sensors.</span>temp.cpu</div>
+                <div class="cat-state">in_use · L2</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">sensors.</span>temp.battery</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+              <div class="cat-row">
+                <div class="cat-id"><span class="ns">power.</span>watt_draw</div>
+                <div class="cat-state add">+ add</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabbar">
+            <div class="tab"><span class="glyph">▸</span><span>HOME</span></div>
+            <div class="tab active"><span class="glyph">+</span><span>BROWSE</span></div>
+            <div class="tab"><span class="glyph">∿</span><span>HISTORY</span></div>
+            <div class="tab"><span class="glyph">⌥</span><span>CONFIG</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════ PHONE 3 · CONFIGURE PROBE ════════════════════ -->
+    <div class="phone-cell">
+      <div class="phone-label">
+        <span class="idx">03</span><span class="name">configure · graphics.fps</span>
+        <span class="desc">slot · format · thresholds</span>
+      </div>
+      <div class="iphone">
+        <div class="screen">
+
+          <div class="statusbar">
+            <span>9:41</span>
+            <div class="right">
+              <svg width="16" height="10" viewBox="0 0 16 10"><path d="M1 7h2v2H1zM5 5h2v4H5zM9 3h2v6H9zM13 1h2v8h-2z" fill="currentColor"/></svg>
+              <svg width="14" height="10" viewBox="0 0 14 10"><path d="M7 8.5C4.5 8.5 2.3 7.5.5 5.8l1-1.1C3 6.2 4.9 7 7 7s4-.8 5.5-2.3l1 1.1C11.7 7.5 9.5 8.5 7 8.5z" fill="currentColor"/></svg>
+              <svg width="24" height="11" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="20" height="10" rx="2" stroke="currentColor" fill="none"/><rect x="2" y="2" width="14" height="7" fill="currentColor"/><rect x="21" y="3.5" width="1.5" height="4" fill="currentColor"/></svg>
+            </div>
+          </div>
+
+          <!-- Live preview island for the metric being configured -->
+          <div class="island compact" style="width: 116px; padding: 0 12px; justify-content: center;">
+            <div class="pill warn">
+              <span class="lbl">fps</span>
+              <span class="val">58</span>
+              <span class="unit">/120</span>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="app-head">
+              <div class="title"><span class="caret">▸</span> graphics.fps</div>
+              <div class="meta"><span>● editing</span></div>
+            </div>
+
+            <div class="cfg-section">
+              <div class="cfg-head">— SLOT ASSIGNMENT —</div>
+              <div class="slot-grid">
+                <div class="slot-cell">L1<div class="slot-tag">system.cpu</div></div>
+                <div class="slot-cell">L2<div class="slot-tag">temp.cpu</div></div>
+                <div class="slot-cell active">R1<div class="slot-tag hl">▸ this</div></div>
+                <div class="slot-cell">R2<div class="slot-tag">memory.used</div></div>
+              </div>
+            </div>
+
+            <div class="cfg-section">
+              <div class="cfg-head">— FORMAT —</div>
+              <div class="cfg-row">
+                <span class="k">value</span>
+                <span class="v">integer</span>
+                <span class="ch">▾</span>
+              </div>
+              <div class="cfg-row">
+                <span class="k">unit suffix</span>
+                <span class="v">/120</span>
+                <span class="ch">edit</span>
+              </div>
+              <div class="cfg-row">
+                <span class="k">precision</span>
+                <span class="v">0</span>
+                <span class="ch">— +</span>
+              </div>
+            </div>
+
+            <div class="cfg-section">
+              <div class="cfg-head">— THRESHOLDS —</div>
+              <div class="threshold">
+                <div class="th-bar">
+                  <span class="th-zone red" style="width:25%"></span>
+                  <span class="th-zone amber" style="width:25%"></span>
+                  <span class="th-zone green" style="width:50%"></span>
+                  <span class="th-marker" style="left:48%"></span>
+                </div>
+                <div class="th-labels">
+                  <span><span class="dot red"></span> &lt;30</span>
+                  <span><span class="dot amber"></span> 30-60</span>
+                  <span><span class="dot green"></span> ≥60</span>
+                </div>
+                <div class="th-now">now: <span class="amber">58</span> · amber</div>
+              </div>
+            </div>
+
+            <div class="cfg-section">
+              <div class="cfg-head">— SAMPLE RATE —</div>
+              <div class="cfg-row">
+                <span class="k">interval</span>
+                <span class="v">1.0s</span>
+                <span class="ch">◀ ▶</span>
+              </div>
+              <div class="cfg-row">
+                <span class="k">battery saver</span>
+                <span class="v">on @ &lt;20%</span>
+                <span class="ch">[ ✓ ]</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tabbar">
+            <div class="tab"><span class="glyph">▸</span><span>HOME</span></div>
+            <div class="tab"><span class="glyph">+</span><span>BROWSE</span></div>
+            <div class="tab"><span class="glyph">∿</span><span>HISTORY</span></div>
+            <div class="tab active"><span class="glyph">⌥</span><span>CONFIG</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ───────── Island state matrix ───────── -->
+  <section class="island-states">
+    <div class="section-title"><span class="num">04</span><span>dynamic island · state matrix</span><span class="rule"></span></div>
+    <div class="state-grid">
+
+      <div class="state-cell">
+        <div class="state-frame"><div class="island-mock compact"></div></div>
+        <div class="state-meta">
+          <div class="state-name">compact / idle</div>
+          <div class="state-desc">no active probe · default ios shape · 122×34</div>
+        </div>
+      </div>
+
+      <div class="state-cell">
+        <div class="state-frame">
+          <div class="island-mock compact" style="width:128px; padding: 0 14px; display:flex; align-items:center; justify-content:center;">
+            <div class="pill"><span class="lbl">cpu</span><span class="val">42</span><span class="unit">%</span></div>
+          </div>
+        </div>
+        <div class="state-meta">
+          <div class="state-name">single · nominal</div>
+          <div class="state-desc">one probe · green = within threshold</div>
+        </div>
+      </div>
+
+      <div class="state-cell">
+        <div class="state-frame">
+          <div class="island-mock split" style="width:240px; padding: 0 14px; gap:12px;">
+            <div class="pill"><span class="lbl">cpu</span><span class="val">42</span><span class="unit">%</span></div>
+            <div class="pill warn"><span class="lbl">fps</span><span class="val">58</span><span class="unit">/120</span></div>
+          </div>
+        </div>
+        <div class="state-meta">
+          <div class="state-name">split · L1+R1</div>
+          <div class="state-desc">two probes · one nominal · one amber</div>
+        </div>
+      </div>
+
+      <div class="state-cell">
+        <div class="state-frame">
+          <div class="island-mock split" style="width:268px; padding: 0 14px; gap:10px;">
+            <div class="pill crit"><span class="lbl">temp</span><span class="val">87.4</span><span class="unit">°C</span></div>
+            <div class="pill crit"><span class="lbl">cpu</span><span class="val">98</span><span class="unit">%</span></div>
+          </div>
+        </div>
+        <div class="state-meta">
+          <div class="state-name">split · all crit</div>
+          <div class="state-desc">red triggers haptic + brief expand-on-tap</div>
+        </div>
+      </div>
+
+      <div class="state-cell expanded-cell">
+        <div class="state-frame state-frame-tall">
+          <div class="island-mock expanded">
+            <div class="exp-row">
+              <div class="exp-pair"><span class="exp-k">cpu</span><span class="exp-v">42<span class="u">%</span></span></div>
+              <div class="exp-pair"><span class="exp-k">fps</span><span class="exp-v exp-warn">58<span class="u">/120</span></span></div>
+            </div>
+            <div class="exp-row">
+              <div class="exp-pair"><span class="exp-k">temp</span><span class="exp-v">38.2<span class="u">°C</span></span></div>
+              <div class="exp-pair"><span class="exp-k">mem</span><span class="exp-v">3.4<span class="u">GB</span></span></div>
+            </div>
+            <div class="exp-spark">
+              <svg viewBox="0 0 200 24" preserveAspectRatio="none">
+                <polyline points="0,16 12,14 24,17 36,13 48,15 60,11 72,14 84,10 96,13 108,9 120,12 132,8 144,11 156,7 168,10 180,6 192,9 200,7" stroke="#fafafa" stroke-opacity="0.7" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="state-meta">
+          <div class="state-name">expanded · long-press</div>
+          <div class="state-desc">all 4 slots + 60s spark · returns to compact in 4s</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ───────── Footer / decisions ───────── -->
+  <footer class="deck-foot">
+    <div class="section-title"><span class="num">05</span><span>open decisions for review</span><span class="rule"></span></div>
+    <ol class="decisions">
+      <li><span class="num">Q1</span><span class="text">name <code>probe</code> ok, or want something else? (ideas: <code>vital</code>, <code>readout</code>, <code>telemetry.app</code>, <code>islet</code>)</span></li>
+      <li><span class="num">Q2</span><span class="text">4-slot model (<code>L1 L2 R1 R2</code>) — too dev-y? alt: 2 slots (left/right) + queue.</span></li>
+      <li><span class="num">Q3</span><span class="text">app-store reality: real-time cpu/gpu/temp from a 3rd-party app is heavily sandboxed on iOS. assume jailbreak / dev-cert / appstore-feasible-subset?</span></li>
+      <li><span class="num">Q4</span><span class="text">monetize: one-time $9.99? subscription? free + pro probes (gpu/network) paywalled?</span></li>
+      <li><span class="num">Q5</span><span class="text">scope v1: live activity only, or also lock-screen widget &amp; control center module?</span></li>
+    </ol>
+  </footer>
+
+</div>
+</body>
+</html>
