@@ -42,70 +42,16 @@ body {
 }
 button { font: inherit; cursor: pointer; }
 
-/* ───────── Stage chrome ───────── */
+/* ───────── Stage ───────── */
 .stage {
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 32px;
-  padding: 36px 32px 56px;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 32px;
   max-width: 1280px;
   margin: 0 auto;
-}
-.stage-head {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 24px;
-  align-items: end;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--line);
-}
-.brand {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-.brand .caret { color: var(--hi); font-weight: 400; }
-.stage-meta {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  font-size: 10.5px;
-  color: var(--text-3);
-}
-.stage-meta .m-pair { display: flex; gap: 6px; }
-.stage-meta .m-pair .k { color: var(--text-4); }
-.stage-meta .m-pair .v { color: var(--text-2); }
-.stage-meta .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  border: 1px solid var(--line-3);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--hi);
-}
-.stage-meta .badge .dot {
-  width: 6px; height: 6px;
-  background: var(--hi);
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
-  animation: pulse 1.6s ease-in-out infinite;
-}
-.hint {
-  grid-column: 1 / -1;
-  font-size: 10.5px;
-  color: var(--text-3);
-  letter-spacing: 0.04em;
-  padding-top: 8px;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
 }
 
 /* ───────── iPhone frame ───────── */
@@ -121,7 +67,6 @@ button { font: inherit; cursor: pointer; }
     0 0 0 3px #050505,
     0 30px 80px -20px rgba(0,0,0,0.85),
     inset 0 0 0 1px rgba(255,255,255,0.03);
-  margin: 0 auto;
 }
 .screen {
   width: 100%;
@@ -132,6 +77,40 @@ button { font: inherit; cursor: pointer; }
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+/* On phones · fill the viewport, drop the bezel */
+@media (max-width: 480px) {
+  body { background: #0a0a0a; }
+  .stage {
+    padding: 0;
+    align-items: stretch;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .iphone {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .screen {
+    border-radius: 0;
+  }
+  /* keep the status bar tucked behind the notch / dynamic island */
+  .statusbar {
+    padding-top: max(18px, env(safe-area-inset-top));
+  }
+  /* push the island down to clear a real notch / dynamic island */
+  .island {
+    top: max(11px, env(safe-area-inset-top));
+  }
+  /* respect the home indicator at the bottom */
+  .design-list {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+  }
 }
 
 /* Status bar */
@@ -169,10 +148,30 @@ button { font: inherit; cursor: pointer; }
   width: 124px;
   padding: 0 14px;
   gap: 10px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+.island::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #232323 0%, #080808 50%, #000 100%);
+  box-shadow: inset 0 0 0 0.5px rgba(255,255,255,0.06);
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 1;
 }
 .island.long {
   padding: 0 28px;
   gap: 22px;
+}
+.island.long::after {
+  right: 14px;
 }
 .island .empty-hint {
   color: var(--text-4);
@@ -267,18 +266,44 @@ button { font: inherit; cursor: pointer; }
   gap: 14px;
   height: 44px;
   min-width: 160px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
   transition:
     width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     padding 0.35s;
   white-space: nowrap;
   animation: previewPop 0.18s ease;
+  position: relative;
+}
+/* Front camera lens (right side, like real iPhone 14 Pro) */
+.preview-island::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #2a2a2a 0%, #0a0a0a 50%, #000 100%);
+  box-shadow:
+    inset 0 0 0 0.5px rgba(255,255,255,0.08),
+    inset 0 0 2px rgba(255,255,255,0.04);
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.85;
 }
 .preview-island.long {
   min-width: 320px;
   padding: 0 36px;
   gap: 28px;
+}
+.preview-island.long::after {
+  right: 20px;
+  width: 11px;
+  height: 11px;
 }
 @keyframes previewPop {
   from { transform: scale(0.96); opacity: 0.4; }
@@ -376,16 +401,16 @@ button { font: inherit; cursor: pointer; }
 .chip {
   flex-shrink: 0;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   font-weight: 500;
-  padding: 6px 10px;
+  padding: 9px 14px;
   border: 1px solid var(--line-2);
   background: transparent;
   color: var(--text-2);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s, color 0.15s;
   white-space: nowrap;
@@ -393,7 +418,7 @@ button { font: inherit; cursor: pointer; }
 .chip:hover { border-color: var(--line-4); color: var(--text); }
 .chip .chip-n {
   color: var(--text-4);
-  font-size: 9px;
+  font-size: 11px;
 }
 .chip.on {
   background: var(--hi);
@@ -405,13 +430,14 @@ button { font: inherit; cursor: pointer; }
 
 /* Group header inside list */
 .list-group-head {
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  color: var(--text-4);
-  padding: 16px 4px 8px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-2);
+  padding: 18px 4px 10px;
   display: flex;
   align-items: baseline;
   gap: 10px;
+  font-weight: 600;
 }
 .list-group-head .lg-rule {
   flex: 1;
