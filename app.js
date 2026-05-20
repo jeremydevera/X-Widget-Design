@@ -5,7 +5,53 @@
 
 // ─────────────────────── LIVE CONTEXT (mock data driving widgets)
 const ctx = {
-  metrics: { cpu: 42, fps: 58, temp: 38.5, battery: 87, memory: 3.4 },
+  // Metrics modeled after what iOS actually exposes:
+  //   cpu / fps     → host_processor_info, CADisplayLink (live)
+  //   memory        → mach_task_basic_info (resident/footprint)
+  //   battery       → UIDevice.batteryLevel + batteryState
+  //   thermal       → ProcessInfo.thermalState (4-step enum)
+  //   diskFree      → URLResourceValues volumeAvailableCapacityForImportantUsageKey
+  //   pressure/alt  → CMAltimeter
+  //   accel/gyro    → CMMotionManager
+  //   heading       → CLLocationManager.heading
+  //   brightness    → UIScreen.brightness
+  //   volume        → AVAudioSession.outputVolume
+  //   refreshRate   → UIScreen.maximumFramesPerSecond
+  //   uptime        → ProcessInfo.systemUptime
+  //   lowPower      → ProcessInfo.isLowPowerModeEnabled
+  //   cores         → ProcessInfo.activeProcessorCount / processorCount
+  //   network       → NWPathMonitor + CTTelephonyNetworkInfo
+  //   steps         → CMPedometer
+  metrics: {
+    cpu: 42, fps: 58,
+    memUsedGB: 1.8, memTotalGB: 6.0,
+    battery: 87, batteryState: 'unplugged',     // unplugged | charging | full
+    thermal: 'nominal',                          // nominal | fair | serious | critical
+    diskFreeGB: 64.2, diskTotalGB: 128.0,
+
+    // sensors
+    pressureHpa: 1013.2,                         // CMAltimeter relativeAltitude pairs with this
+    altitudeM:   3.5,                            // relative altitude (meters from baseline)
+    brightness:  62,                             // 0–100%
+    volume:      40,                             // 0–100%
+    heading:     127,                            // 0–360°
+    steps:       8243,                           // since midnight, pedometer
+    accel: { x: 0.02, y: -0.01, z: -0.99 },      // G; resting iPhone face up reads ~ -1g on Z
+    gyro:  { x: 0.0,  y: 0.0,   z: 0.0 },        // rad/s
+    proximity: false,                            // UIDevice.proximityState
+
+    // device + environment
+    cores:        6,                             // ProcessInfo.activeProcessorCount (e.g. A17 Pro)
+    coresTotal:   6,                             // ProcessInfo.processorCount
+    uptimeS:      4*3600 + 23*60 + 11,           // ProcessInfo.systemUptime (seconds)
+    lowPower:     false,
+    refreshHz:    120,                           // UIScreen.maximumFramesPerSecond
+    network:      'wifi',                        // wifi | cellular | wired | none
+    cellTech:     '5G',                          // 5G NR | LTE | 3G | —
+    carrier:      'PLDT Mobile',
+    deviceModel:  'iPhone 15 Pro',
+    iosVersion:   '17.4'
+  },
   weather: { temp: 21, glyph: '☀', desc: 'sunny' },
   clock: '9:41',
   date: 'THU 21'
@@ -49,17 +95,17 @@ const DESIGNS = [
   },
   {
     id: 'cpu-temp',
-    name: 'cpu + temp',
+    name: 'cpu + thermal',
     category: 'DEVICE',
     short: c => `
       <span class="w"><span class="w-lbl">cpu</span><span class="w-val">${Math.round(c.metrics.cpu)}%</span></span>
-      <span class="w"><span class="w-lbl">°c</span><span class="w-val">${c.metrics.temp.toFixed(1)}</span></span>`,
+      <span class="w"><span class="w-lbl">th</span><span class="w-val" style="text-transform:uppercase;font-size:10px">${c.metrics.thermal.slice(0,4)}</span></span>`,
     long: c => `
       <div class="long-grid">
         <span class="w" style="justify-content:flex-start"><span class="w-lbl">CPU</span><span class="w-big">${Math.round(c.metrics.cpu)}<span style="font-size:0.6em;color:#5a5a5a">%</span></span></span>
-        <span class="w" style="justify-content:flex-start"><span class="w-lbl">TEMP</span><span class="w-big">${c.metrics.temp.toFixed(1)}<span style="font-size:0.5em;color:#5a5a5a">°C</span></span></span>
-        <span class="w" style="justify-content:flex-start"><span class="w-lbl">MEM</span><span class="w-big">${c.metrics.memory.toFixed(1)}<span style="font-size:0.5em;color:#5a5a5a">GB</span></span></span>
-        <span class="w" style="justify-content:flex-start"><span class="w-lbl">PWR</span><span class="w-big">3.2<span style="font-size:0.5em;color:#5a5a5a">W</span></span></span>
+        <span class="w" style="justify-content:flex-start"><span class="w-lbl">THERMAL</span><span class="w-big" style="text-transform:uppercase;font-size:18px">${c.metrics.thermal}</span></span>
+        <span class="w" style="justify-content:flex-start"><span class="w-lbl">MEM</span><span class="w-big">${c.metrics.memUsedGB.toFixed(1)}<span style="font-size:0.5em;color:#5a5a5a">GB</span></span></span>
+        <span class="w" style="justify-content:flex-start"><span class="w-lbl">FPS</span><span class="w-big">${Math.round(c.metrics.fps)}</span></span>
       </div>`
   },
   {
@@ -242,8 +288,20 @@ const state = {
   focusedId: 'weather-now',   // what's in the preview frame (driven by scroll)
   appliedId: 'weather-now',   // what's actually applied (sticky until tap)
   size: 'short',              // 'short' | 'long'
-  filter: 'ALL'               // category filter or 'ALL'
+  filter: 'ALL',              // category filter or 'ALL'
+  tab: 'island',              // 'island' | 'performance' | 'settings'
+  prefs: {
+    animations: true,
+    compact: false,
+    refreshMs: 1000,
+    liveData: true,
+    defaultSize: 'short'
+  }
 };
+
+// rolling 60s history of CPU samples for the performance graph
+const cpuHistory = [];
+const HISTORY_LEN = 60;
 
 // ─────────────────────── HELPERS
 const $ = sel => document.querySelector(sel);
@@ -377,7 +435,10 @@ function renderPreview() {
 }
 
 function renderRealIsland() {
+  // Top dynamic island removed — preview-only mode.
   const el = $('#island');
+  if (!el) return;
+  // Defensive: keep behavior if element ever returns
   const d = designById(state.focusedId);
   if (!d) {
     el.classList.remove('long');
@@ -385,10 +446,8 @@ function renderRealIsland() {
     el.innerHTML = '<span class="empty-hint">EMPTY</span>';
     return;
   }
-  // LONG = same content, just wider
   el.innerHTML = d.short(ctx);
   el.classList.toggle('long', state.size === 'long');
-  // Auto-fit width based on content + the short/long padding
   el.style.width = 'auto';
   requestAnimationFrame(() => {
     const w = el.scrollWidth;
@@ -477,34 +536,296 @@ function applyCurrent() {
 
 // ─────────────────────── LIVE TICK (so widgets feel alive)
 function tick() {
+  if (!state.prefs.liveData) return;
   const m = ctx.metrics;
-  m.cpu     = clamp(m.cpu     + jitter(6),   8, 98);
-  m.fps     = clamp(m.fps     + jitter(5),  30, 120);
-  m.temp    = clamp(m.temp    + jitter(0.3), 32, 48);
-  m.battery = clamp(m.battery + jitter(0.2), 10, 100);
-  m.memory  = clamp(m.memory  + jitter(0.12), 2.0, 5.5);
+
+  // CPU · 0–100%, %-busy across all cores (host_processor_info)
+  m.cpu = clamp(m.cpu + jitter(6), 4, 98);
+  // FPS · CADisplayLink. iPhones cap at 60 or 120 (ProMotion)
+  m.fps = clamp(m.fps + jitter(4), 30, m.refreshHz);
+  // Memory footprint · mach_task_basic_info (resident_size + compressed)
+  m.memUsedGB = clamp(m.memUsedGB + jitter(0.04), 0.4, m.memTotalGB - 0.2);
+  // Battery level (0..100). Charging state changes occasionally.
+  m.battery = clamp(m.battery + (m.batteryState === 'charging' ? 0.05 : jitter(0.15)), 5, 100);
+  // Thermal state · ProcessInfo. Mostly stays nominal/fair, drift up under load.
+  if (Math.random() < 0.02) {
+    const states = ['nominal', 'fair', 'serious', 'critical'];
+    const cur = states.indexOf(m.thermal);
+    const next = clamp(cur + (Math.random() < 0.6 ? -1 : 1), 0, 3);
+    m.thermal = states[next];
+  }
+  // Disk free · slowly drifts down
+  m.diskFreeGB = clamp(m.diskFreeGB + jitter(0.02), 1, m.diskTotalGB);
+
+  // ─ Sensors
+  m.pressureHpa = clamp(m.pressureHpa + jitter(0.08), 950, 1050);
+  m.altitudeM   = clamp(m.altitudeM   + jitter(0.12), -50, 200);
+  m.brightness  = clamp(m.brightness  + jitter(1.2),   0, 100);
+  m.volume      = clamp(m.volume      + jitter(0.8),   0, 100);
+  m.heading     = (m.heading + (Math.random() - 0.5) * 4 + 360) % 360;
+  m.steps       = m.steps + (Math.random() < 0.4 ? Math.floor(Math.random() * 3) : 0);
+
+  // accel/gyro: keep base posture (face up ≈ -1g on Z) plus small jitter
+  m.accel.x = clamp(0.02 + jitter(0.12), -1.5, 1.5);
+  m.accel.y = clamp(-0.01 + jitter(0.12), -1.5, 1.5);
+  m.accel.z = clamp(-0.99 + jitter(0.06), -1.5, 1.5);
+  m.gyro.x  = clamp(jitter(0.4), -3, 3);
+  m.gyro.y  = clamp(jitter(0.4), -3, 3);
+  m.gyro.z  = clamp(jitter(0.4), -3, 3);
+
+  // ─ Environment
+  m.uptimeS += state.prefs.refreshMs / 1000;
+  // Occasionally flip proximity / low power for a sign of life
+  if (Math.random() < 0.005) m.proximity = !m.proximity;
+  if (m.battery < 20 && !m.lowPower && Math.random() < 0.05) m.lowPower = true;
+  if (m.battery > 80 && m.lowPower) m.lowPower = false;
+
+  // push CPU sample for graph
+  cpuHistory.push(m.cpu);
+  if (cpuHistory.length > HISTORY_LEN) cpuHistory.shift();
 
   const d = new Date();
   ctx.clock = `${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
 
-  renderPreview();
-  // Update list previews too (lightweight: just innerHTML the mini preview cells)
-  $$('.drow').forEach(r => {
-    const id = r.dataset.id;
-    const design = designById(id);
-    const previewCell = r.querySelector('.drow-preview');
-    if (previewCell && design) {
-      previewCell.innerHTML = design.short(ctx);
-    }
-  });
+  // Only re-render the active tab's content
+  if (state.tab === 'island') {
+    renderPreview();
+    $$('.drow').forEach(r => {
+      const id = r.dataset.id;
+      const design = designById(id);
+      const previewCell = r.querySelector('.drow-preview');
+      if (previewCell && design) {
+        previewCell.innerHTML = design.short(ctx);
+      }
+    });
+  } else if (state.tab === 'performance') {
+    renderPerformance();
+  }
+  // Real island still mirrors live data regardless of tab
+  renderRealIsland();
 }
+
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 function jitter(span) { return (Math.random() - 0.5) * span; }
+// ─────────────────────── TAB SWITCHING
+function setTab(tab) {
+  if (state.tab === tab) return;
+  state.tab = tab;
+  $$('.tab-panel').forEach(p => p.classList.toggle('is-active', p.dataset.tab === tab));
+  $$('.tabbar .tab').forEach(b => b.classList.toggle('on', b.dataset.tab === tab));
 
-// ─────────────────────── CLOCK (status bar)
-function updateClock() {
-  const d = new Date();
-  $('#clock').textContent = `${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
+  // First render of a tab when entering
+  if (tab === 'performance') renderPerformance();
+}
+
+// ─────────────────────── PERFORMANCE TAB
+const THERMAL_RANK = { nominal: 1, fair: 2, serious: 3, critical: 4 };
+
+function renderPerformance() {
+  const m = ctx.metrics;
+
+  // ─ CPU
+  setText('#perf-cpu', Math.round(m.cpu));
+  setBar('cpu', m.cpu, 100);
+
+  // ─ Memory · used / total
+  setText('#perf-mem', m.memUsedGB.toFixed(1));
+  setText('#perf-mem-src', `${m.memUsedGB.toFixed(1)} / ${m.memTotalGB.toFixed(1)} GB`);
+  setBar('memory', m.memUsedGB, m.memTotalGB);
+
+  // ─ FPS · target = 120 for ProMotion
+  setText('#perf-fps', Math.round(m.fps));
+  setBar('fps', m.fps, 120);
+
+  // ─ Thermal · 4-step enum, no °C reading
+  setText('#perf-thermal', m.thermal);
+  const lit = THERMAL_RANK[m.thermal] || 0;
+  $$('.thermal-track .ts').forEach((seg, i) => {
+    seg.classList.toggle('lit', i < lit);
+  });
+
+  // ─ Battery
+  setText('#perf-batt', Math.round(m.battery));
+  setText('#perf-batt-state', m.batteryState.toUpperCase());
+  setBar('battery', m.battery, 100);
+
+  // ─ Disk · free
+  setText('#perf-disk', m.diskFreeGB.toFixed(1));
+  setText('#perf-disk-src', `${m.diskFreeGB.toFixed(1)} / ${m.diskTotalGB.toFixed(0)} GB`);
+  setBar('disk', m.diskFreeGB, m.diskTotalGB);
+
+  // ─ Cores
+  setText('#perf-cores', `${m.cores}/${m.coresTotal}`);
+  setBar('cores', m.cores, m.coresTotal);
+
+  // ─ Display & audio
+  setText('#perf-fps-target', `/${m.refreshHz}`);
+  setText('#perf-bright', Math.round(m.brightness));
+  setBar('brightness', m.brightness, 100);
+  setText('#perf-vol', Math.round(m.volume));
+  setBar('volume', m.volume, 100);
+
+  // ─ Sensors
+  setText('#perf-press', m.pressureHpa.toFixed(1));
+  setText('#perf-alt',   `${m.altitudeM >= 0 ? '+' : ''}${m.altitudeM.toFixed(1)} m`);
+
+  setText('#perf-head', `${Math.round(m.heading)}°`);
+  const needle = $('#compass-needle');
+  if (needle) needle.style.transform = `translate(-50%, -100%) rotate(${m.heading}deg)`;
+
+  // accel: each axis bar centers at 50%; scale ±2g range
+  fillAxis('#perf-ax', '#perf-ax-bar', m.accel.x, 2);
+  fillAxis('#perf-ay', '#perf-ay-bar', m.accel.y, 2);
+  fillAxis('#perf-az', '#perf-az-bar', m.accel.z, 2);
+  // gyro: ±3 rad/s
+  fillAxis('#perf-gx', '#perf-gx-bar', m.gyro.x, 3);
+  fillAxis('#perf-gy', '#perf-gy-bar', m.gyro.y, 3);
+  fillAxis('#perf-gz', '#perf-gz-bar', m.gyro.z, 3);
+
+  setText('#perf-steps', m.steps.toLocaleString());
+  setBar('steps', m.steps, 10000);
+
+  setText('#perf-prox', m.proximity ? 'NEAR' : 'FAR');
+
+  // ─ Network & device info
+  setText('#perf-net',     m.network.toUpperCase());
+  setText('#perf-cell',    m.cellTech);
+  setText('#perf-carrier', m.carrier);
+  setText('#perf-refresh', `${m.refreshHz} Hz`);
+  setText('#perf-lowpower', m.lowPower ? 'ON' : 'OFF');
+  setText('#perf-uptime',  formatUptime(m.uptimeS));
+  setText('#perf-device',  m.deviceModel);
+  setText('#perf-ios',     m.iosVersion);
+
+  // ─ CPU history graph
+  const line = $('#perf-line');
+  if (line && cpuHistory.length > 1) {
+    const w = 300, h = 80, pad = 4;
+    const points = cpuHistory.map((v, i) => {
+      const x = (i / (HISTORY_LEN - 1)) * w;
+      const y = h - pad - (v / 100) * (h - pad * 2);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+    line.setAttribute('points', points);
+  }
+  setText('#perf-graph-now', Math.round(m.cpu) + '%');
+
+  // ─ MetricKit-style daily report (synthetic but stable-ish)
+  // These map to real MXMetricPayload fields
+  const mk = ctx._mk || (ctx._mk = synthMetricKit());
+  setText('#mxm-cpu',    `${mk.cpuTimeS} s`);
+  setText('#mxm-peak',   `${mk.peakMemMB} MB`);
+  setText('#mxm-launch', `${mk.launch95ms} ms`);
+  setText('#mxm-hangs',  `${mk.hangS} s`);
+  setText('#mxm-disk',   `${mk.diskMB} MB`);
+  setText('#mxm-net',    `${mk.cellKB} KB`);
+}
+
+function synthMetricKit() {
+  // Generated once per session — represents the "last daily diagnostic"
+  return {
+    cpuTimeS:   (180 + Math.random() * 240).toFixed(0),     // MXCPUMetric.cumulativeCPUTime
+    peakMemMB:  (220 + Math.random() * 180).toFixed(0),     // MXMemoryMetric.peakMemoryUsage
+    launch95ms: (380 + Math.random() * 220).toFixed(0),     // MXAppLaunchMetric.histogrammedTimeToFirstDraw p95
+    hangS:      (1.2 + Math.random() * 3).toFixed(2),       // MXAppResponsivenessMetric.histogrammedAppHangTime
+    diskMB:     (12  + Math.random() * 40).toFixed(1),      // MXDiskIOMetric.cumulativeLogicalWrites
+    cellKB:     (40  + Math.random() * 220).toFixed(0)      // MXNetworkTransferMetric.cumulativeCellularUpload
+  };
+}
+
+function setBar(metric, val, max) {
+  const card = document.querySelector(`.perf-card[data-metric="${metric}"]`);
+  if (!card) return;
+  const bar = card.querySelector('.pc-bar > span');
+  if (!bar) return;
+  const pct = Math.max(0, Math.min(100, (val / max) * 100));
+  bar.style.width = pct.toFixed(1) + '%';
+}
+
+// Bipolar bar that grows left or right of center based on sign of value (range ± `range`)
+function fillAxis(valSel, barSel, val, range) {
+  const valEl = document.querySelector(valSel);
+  const barEl = document.querySelector(barSel);
+  if (valEl) valEl.textContent = (val >= 0 ? '+' : '') + val.toFixed(2);
+  if (!barEl) return;
+  const pct = Math.max(-1, Math.min(1, val / range)) * 50; // -50%..+50%
+  if (pct >= 0) {
+    barEl.style.left = '50%';
+    barEl.style.width = pct.toFixed(1) + '%';
+  } else {
+    barEl.style.left = (50 + pct).toFixed(1) + '%';
+    barEl.style.width = Math.abs(pct).toFixed(1) + '%';
+  }
+}
+
+function formatUptime(s) {
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = Math.floor(s % 60);
+  if (h > 0) return `${h}h ${m}m ${sec}s`;
+  if (m > 0) return `${m}m ${sec}s`;
+  return `${sec}s`;
+}
+
+function setText(sel, val) {
+  const el = $(sel);
+  if (el) el.textContent = val;
+}
+
+// ─────────────────────── SETTINGS
+let tickTimer = null;
+function startTickTimer() {
+  if (tickTimer) clearInterval(tickTimer);
+  tickTimer = setInterval(tick, state.prefs.refreshMs);
+}
+
+function applyAnimPref() {
+  document.body.classList.toggle('no-anim', !state.prefs.animations);
+}
+function applyCompactPref() {
+  document.body.classList.toggle('compact', state.prefs.compact);
+}
+
+function wireSettings() {
+  // Animations
+  $('#set-anim').addEventListener('change', e => {
+    state.prefs.animations = e.target.checked;
+    applyAnimPref();
+  });
+  // Compact
+  $('#set-compact').addEventListener('change', e => {
+    state.prefs.compact = e.target.checked;
+    applyCompactPref();
+  });
+  // Refresh rate
+  $('#set-refresh').querySelectorAll('button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.prefs.refreshMs = parseInt(b.dataset.rate, 10);
+      $('#set-refresh').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+      startTickTimer();
+    });
+  });
+  // Live data
+  $('#set-live').addEventListener('change', e => {
+    state.prefs.liveData = e.target.checked;
+  });
+  // Default size
+  $('#set-default-size').querySelectorAll('button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.prefs.defaultSize = b.dataset.size;
+      $('#set-default-size').querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+      setSize(b.dataset.size);
+    });
+  });
+  // Reset applied
+  $('#set-reset').addEventListener('click', () => {
+    state.appliedId = 'weather-now';
+    setFocus('weather-now', { scroll: false });
+    renderPreview();
+    updateRowFocus();
+  });
+  // Static "about" count
+  setText('#set-design-count', DESIGNS.length);
 }
 
 // ─────────────────────── BOOT
@@ -525,12 +846,18 @@ function init() {
     b.addEventListener('click', () => setSize(b.dataset.size));
   });
 
-  // Clock
-  updateClock();
-  setInterval(updateClock, 30 * 1000);
+  // Tab bar
+  $$('.tabbar .tab').forEach(b => {
+    b.addEventListener('click', () => setTab(b.dataset.tab));
+  });
+
+  // Settings
+  wireSettings();
+  applyAnimPref();
+  applyCompactPref();
 
   // Live data
-  setInterval(tick, 1000);
+  startTickTimer();
 }
 
 document.addEventListener('DOMContentLoaded', init);
