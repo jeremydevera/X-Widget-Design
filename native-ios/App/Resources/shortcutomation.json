@@ -1,0 +1,5178 @@
+[
+  {
+    "slug": "start-the-day-right",
+    "name": "Start the Day Right",
+    "emoji": "☀️",
+    "category": "LifeOS Toolkits",
+    "uuid": "86f74c464d164b98a5ad5cabe4101484"
+  },
+  {
+    "slug": "end-the-day-right",
+    "name": "End the Day Right",
+    "emoji": "🌙",
+    "category": "LifeOS Toolkits",
+    "uuid": "f3a337aeacd343d2bf3455f400345fb7"
+  },
+  {
+    "slug": "brain-recharger",
+    "name": "Brain Recharger",
+    "emoji": "🔌",
+    "category": "LifeOS Toolkits",
+    "uuid": "20f650c506584dc78f090e67b06d4d32"
+  },
+  {
+    "slug": "my-life-on-this-day",
+    "name": "My Life On This Day",
+    "emoji": "🌻",
+    "category": "LifeOS Toolkits",
+    "uuid": "91def5a1015746169dbe954577ff24c9",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "memento-mori",
+    "name": "Memento Mori",
+    "emoji": "⚰️",
+    "category": "LifeOS Toolkits",
+    "uuid": "23f56882ba7d497194748094e13d6984",
+    "requiredApps": [
+      {
+        "name": "Any Text",
+        "url": "https://sindresorhus.com/any-text"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "call-people-i-love",
+    "name": "Call People I Love",
+    "emoji": "❤️",
+    "category": "LifeOS Toolkits",
+    "uuid": "f172ae7aab314dfc8cba8dafd33f8400"
+  },
+  {
+    "slug": "binaryquote",
+    "name": "BinaryQuote",
+    "emoji": "🌈",
+    "category": "LifeOS Toolkits",
+    "uuid": "580dfa3bd21948a3a63fdc9933de1375"
+  },
+  {
+    "slug": "goodreadsquote",
+    "name": "GoodreadsQuote",
+    "emoji": "🗽",
+    "category": "LifeOS Toolkits",
+    "uuid": "fa9ec838b5bf43d0a86d7acc50465b24"
+  },
+  {
+    "slug": "keep-buying",
+    "name": "Keep Buying",
+    "emoji": "🤑",
+    "category": "LifeOS Toolkits",
+    "uuid": "ed4cc19cad744ca9bb380e6ac0a0349a",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "recipe-of-the-day",
+    "name": "Recipe Of The Day",
+    "emoji": "🥙",
+    "category": "LifeOS Toolkits",
+    "uuid": "12abb0a27d7d4f58bf482cc7d369818a"
+  },
+  {
+    "slug": "sketch-of-the-day",
+    "name": "Sketch Of The Day",
+    "emoji": "🎨",
+    "category": "LifeOS Toolkits",
+    "uuid": "e5ab69c3ec5f4d628cfc62f01c4a0967"
+  },
+  {
+    "slug": "exercise-of-the-day",
+    "name": "Exercise Of The Day",
+    "emoji": "🤸🏽‍♀️",
+    "category": "LifeOS Toolkits",
+    "uuid": "39c80fe5f8bb40abb7602e3c620de681",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "workout-of-the-day",
+    "name": "Workout Of The Day",
+    "emoji": "🦁",
+    "category": "LifeOS Toolkits",
+    "uuid": "1d65cb6c64fa4a5a80318671b1263880",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "word-of-the-day",
+    "name": "Word Of The Day",
+    "emoji": "🧑🏽‍🏫",
+    "category": "LifeOS Toolkits",
+    "uuid": "5655b7961cda4771b2ec9d83f38a9c0b",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "taegliches-deutsch",
+    "name": "Taegliches Deutsch",
+    "emoji": "🇩🇪",
+    "category": "LifeOS Toolkits",
+    "uuid": "e53b607cade644dab59d9b871a05dff5",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "visual-words",
+    "name": "Visual > Words",
+    "emoji": "🖼️",
+    "category": "LifeOS Toolkits",
+    "uuid": "44984cd062be4a928f4997a0161ee160"
+  },
+  {
+    "slug": "britannica",
+    "name": "Britannica",
+    "emoji": "📰",
+    "category": "LifeOS Toolkits",
+    "uuid": "ed0baf5e5d1640daaf5db887be44cc7e",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "hn-top-post",
+    "name": "HN Top Post",
+    "emoji": "🚀",
+    "category": "LifeOS Toolkits",
+    "uuid": "c6eedb690ccd48099988dbbc2ba114fb",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "tell-me-more",
+    "name": "Tell Me More!",
+    "emoji": "🪭",
+    "category": "LifeOS Toolkits",
+    "uuid": "6daf0de1fa2d4c73aaafce1705bfd952",
+    "requiredApps": [
+      {
+        "name": "Microsoft Edge",
+        "url": "https://www.microsoft.com/edge"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "relationships-reflection",
+    "name": "Relationships Reflection",
+    "emoji": "💒",
+    "category": "LifeOS Toolkits",
+    "uuid": "9065f6d572b94d07bfaa7ebf4d93bd21"
+  },
+  {
+    "slug": "you-deserve-it",
+    "name": "You Deserve It",
+    "emoji": "🍭",
+    "category": "LifeOS Toolkits",
+    "uuid": "8470133409164001bf8de54c39d520da",
+    "requiredApps": [
+      {
+        "name": "Microsoft Edge",
+        "url": "https://www.microsoft.com/edge"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "extract-insight-timer-quote",
+    "name": "Extract Insight Timer Quote",
+    "emoji": "💬",
+    "category": "LifeOS Toolkits",
+    "uuid": "4daa4ae91119456dbf95dc29254f6e86",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "memories-on-this-day",
+    "name": "Memories On This Day",
+    "emoji": "☘️",
+    "category": "LifeOS Toolkits",
+    "uuid": "d035311650594c8e9a2a56c31bcaf762"
+  },
+  {
+    "slug": "get-random-memory-this-year",
+    "name": "Get Random Memory This Year",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "382b0ca505dd454a88fac1faf852a965",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-random-visual",
+    "name": "Get Random Visual",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "107e227241d1424bbd16552777002923",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-random-quote-from-binaryquote",
+    "name": "Get Random Quote from BinaryQuote",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "5ca247235189418c87abd1a4218fbb6e"
+  },
+  {
+    "slug": "get-random-quote-from-goodreads",
+    "name": "Get Random Quote from Goodreads",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "cb4aeaf2ebaf454cad784d68b1a30eb5"
+  },
+  {
+    "slug": "get-random-paragraph-from-my-polaris",
+    "name": "Get Random Paragraph from My Polaris",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "11b307580ee34fe181204345603f6562"
+  },
+  {
+    "slug": "photos",
+    "name": "Photos",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "22cf5a2c49af448fb422b76fb1042d64",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "morning-greetings",
+    "name": "Morning Greetings",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "280bfa1b8b10452284ce14839d7a8149",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "evening-greetings",
+    "name": "Evening Greetings",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "7f8cea8050064abf9523585aecaf1427"
+  },
+  {
+    "slug": "life-progress-calculator",
+    "name": "Life Progress Calculator",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "111ff1d3258843b58d856661637d9647",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "review-podcast-shownotes",
+    "name": "Review Podcast Shownotes",
+    "emoji": "",
+    "category": "LifeOS Toolkits",
+    "uuid": "b0e48e70ae3a4ecba28079be59ea7c95",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "review-daily-photos",
+    "name": "Review Daily Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "e36995ae4b4f4f17a6499d3572cc3c8d",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "done-with-daily-photos",
+    "name": "Done with Daily Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "411ce7e0f6b1470b8a3c925fa203b8c6",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "archive-weekly-photos",
+    "name": "Archive Weekly Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "cac99a9ea642490f8686ba7ff951a9cd"
+  },
+  {
+    "slug": "review-weekly-photos",
+    "name": "Review Weekly Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "3302d2d163f045e59cab869d2d81eadc",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "done-with-weekly-photos",
+    "name": "Done with Weekly Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "0c0ff6035723412a9f13f54d7f491c65"
+  },
+  {
+    "slug": "review-photos",
+    "name": "Review Photos",
+    "emoji": "",
+    "category": "Review Photos",
+    "uuid": "2a6708baf932414e9040cd18567f30c9"
+  },
+  {
+    "slug": "create-new-journal",
+    "name": "Create New Journal",
+    "emoji": "✏️",
+    "category": "Journaling",
+    "uuid": "763bcd6b557349d9a271c33c5a6d8308",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "journaling",
+    "name": "Journaling",
+    "emoji": "📝",
+    "category": "Journaling",
+    "uuid": "bca6ebf8dc4d44438d262ad471850136"
+  },
+  {
+    "slug": "open-journal",
+    "name": "Open Journal",
+    "emoji": "📔",
+    "category": "Journaling",
+    "uuid": "8dc502b1f4c74c0eb07db81312c4ed1b"
+  },
+  {
+    "slug": "log-journal",
+    "name": "Log Journal",
+    "emoji": "🐧",
+    "category": "Journaling",
+    "uuid": "a172b3795dca4bf99875c2e6661b1385",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "attach-to-journal",
+    "name": "Attach to Journal",
+    "emoji": "🌠",
+    "category": "Journaling",
+    "uuid": "a0124cf521a44ff6b70c6e1e2f6d215f",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "review-weekly-journals",
+    "name": "Review Weekly Journals",
+    "emoji": "📇",
+    "category": "Journaling",
+    "uuid": "393bf7ead6fe4d65a1e80809994456a9",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "journals-on-this-day",
+    "name": "Journals On This Day",
+    "emoji": "🍄",
+    "category": "Journaling",
+    "uuid": "65ab93b43edc433b87b7ffed8dba9ff1",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-journal-file-path",
+    "name": "_Get Journal File Path",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "087ad12524ab4b5ebd43594257262718"
+  },
+  {
+    "slug": "get-key-path-for-journal-metadata",
+    "name": "_Get Key Path for Journal Metadata",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "d5785180d5c74349838f33878a36f13e"
+  },
+  {
+    "slug": "log-journal-metadata",
+    "name": "_Log Journal Metadata",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "383d11ce11ac471b942897b631a4b509",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "show-journal-metadata",
+    "name": "_Show Journal Metadata",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "486defc12d5341edb518165bb99230e4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "query-weekly-journals",
+    "name": "_Query Weekly Journals",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "452bf4e4fa5040ad830710398c2060fe"
+  },
+  {
+    "slug": "query-journals-on-this-day",
+    "name": "_Query Journal(s) On This Day",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "f06ff8220f7b49f0abc354b55e946a5f"
+  },
+  {
+    "slug": "get-random-journal-prompts",
+    "name": "Get Random Journal Prompt(s)",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "5ab26db9732344c88d7d44ee024f03e0",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "speak-journal-prompts",
+    "name": "Speak Journal Prompt(s)",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "752a691c406d4932bfe9399214a804cd",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "log-health-data-bed-and-wakeup-time",
+    "name": "Log Health Data - Bed & Wakeup Time",
+    "emoji": "",
+    "category": "Journaling",
+    "uuid": "2a9b2d78c29340038f368f3ed008c599",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "create-new-note",
+    "name": "Create New Note",
+    "emoji": "🗒️",
+    "category": "Second Brain",
+    "uuid": "34182c918d01465ba3d98adc740865f8"
+  },
+  {
+    "slug": "prepend-or-append-to-note",
+    "name": "Prepend or Append to Note",
+    "emoji": "🗒️",
+    "category": "Second Brain",
+    "uuid": "682f675c369e400d8a9a70adec1c1842"
+  },
+  {
+    "slug": "obsidian",
+    "name": "Obsidian",
+    "emoji": "📑",
+    "category": "Second Brain",
+    "uuid": "f8873f1d095c4166b8eeb0d9758f8095",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "anotes",
+    "name": "ANotes",
+    "emoji": "📑",
+    "category": "Second Brain",
+    "uuid": "e5c0650df4cd4e03b18712291c201b8c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "capture-ideas-around-me",
+    "name": "Capture Ideas Around Me",
+    "emoji": "👁️",
+    "category": "Second Brain",
+    "uuid": "d02ada73c6bd479f91ece17df1599193",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "capture-quotes",
+    "name": "Capture Quotes",
+    "emoji": "❝",
+    "category": "Second Brain",
+    "uuid": "6419fe771fdb4d0b901fc23cefa84163"
+  },
+  {
+    "slug": "add-to-inbox",
+    "name": "Add to Inbox",
+    "emoji": "📥",
+    "category": "Second Brain",
+    "uuid": "75d733b68cb9415d9e138b14eeb742f6",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "review-inbox",
+    "name": "Review Inbox",
+    "emoji": "👀",
+    "category": "Second Brain",
+    "uuid": "066fb750ebdf43cdb3a6fac96e993011",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "water-digital-garden",
+    "name": "Water Digital Garden",
+    "emoji": "👨🏽‍🌾",
+    "category": "Second Brain",
+    "uuid": "b7ba3fcdb59441df968d8b7e9b79a5b7",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "brain-dump",
+    "name": "Brain Dump",
+    "emoji": "🙌",
+    "category": "Second Brain",
+    "uuid": "7cca98e204e14746904d9df8605d79c9",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-unorganized-inbox-reminders",
+    "name": "Get Unorganized Inbox Reminders",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "6a41c3c692064538b1312180cd520cdb",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-second-brain-file-path",
+    "name": "_Get Second Brain File Path",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "1d445190d5e7436c824cef127be3e522"
+  },
+  {
+    "slug": "add-to-reminder-list",
+    "name": "_Add to Reminder List",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "236f452d725542b0bcbe95ee7546fd44",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "read-markdown-frontmatter",
+    "name": "_Read Markdown Frontmatter",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "24c7429e6f994ea7a44401cb2b9f404e"
+  },
+  {
+    "slug": "write-markdown-frontmatter",
+    "name": "_Write Markdown Frontmatter",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "d96b6b933da048ca88122ff83cfbc401"
+  },
+  {
+    "slug": "remove-empty-frontmatter",
+    "name": "_Remove Empty Frontmatter",
+    "emoji": "",
+    "category": "Second Brain",
+    "uuid": "04331484a2af401c93f4abb4b59abc60"
+  },
+  {
+    "slug": "mindware-update",
+    "name": "Mindware Update",
+    "emoji": "🐐",
+    "category": "Weekly Mindware Update",
+    "uuid": "2e1cdfbae5894fc083a89a9c812dc61a",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "create-new-wmu-issue",
+    "name": "Create New WMU Issue",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "a6ff6e18b11e4e808c54f75475d8e30e"
+  },
+  {
+    "slug": "open-wmu",
+    "name": "Open WMU",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "4e660d186c6b488fa7443a18aa233b0d",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-wmu-file-path",
+    "name": "_Get WMU File Path",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "9a2f60fc8f944a39961c981ee6de1a60"
+  },
+  {
+    "slug": "get-random-wmu-item",
+    "name": "_Get Random WMU Item",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "29247e1696014bb0960d3663fccddba4",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "speak-random-wmu-item",
+    "name": "_Speak Random WMU Item",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "b63c3e3389fd42af93c180cd4e3f6747"
+  },
+  {
+    "slug": "show-random-item-from-wmu-backlog",
+    "name": "_Show Random Item from WMU Backlog",
+    "emoji": "",
+    "category": "Weekly Mindware Update",
+    "uuid": "38f414025185432fa87bca9165d9adbc",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "share-evergreen-lists",
+    "name": "Share Evergreen Lists",
+    "emoji": "🌼",
+    "category": "Evergreen Lists",
+    "uuid": "12ed1ad21d1c4378b5782f64d3df3563",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Caffeinated",
+        "url": "https://caffeinated.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "evergreen-list-to-markdown",
+    "name": "_Evergreen List to Markdown",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "ce4c31f6f4244cab818a51af53f0eb4a",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "evergreen-list-to-pdf",
+    "name": "_Evergreen List to PDF",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "f2f495e324254676bd5feacd014aeb31"
+  },
+  {
+    "slug": "evergreen-list-to-json",
+    "name": "_Evergreen List to JSON",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "9042d3827c9d4da48e232ceb73b24f09"
+  },
+  {
+    "slug": "evergreen-list-to-google-sheets",
+    "name": "_Evergreen List to Google Sheets",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "9479edf1d24c44bfbef6f659c06a739b",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "show-random-item-from-evergreen-list",
+    "name": "_Show Random Item from Evergreen List",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "a8eb639739a642df80845f7a509b5136",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-random-item-from-evergreen-list",
+    "name": "_Get Random Item from Evergreen List",
+    "emoji": "",
+    "category": "Evergreen Lists",
+    "uuid": "b085b5b9ec2e411db3ba8354ecedfe6a"
+  },
+  {
+    "slug": "share-brain-food",
+    "name": "Share Brain Food",
+    "emoji": "🌷",
+    "category": "Brain Food",
+    "uuid": "5bf154f7e813450caeb53a20e1d0a06a",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Caffeinated",
+        "url": "https://caffeinated.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "brain-food",
+    "name": "Brain Food",
+    "emoji": "🧠",
+    "category": "Brain Food",
+    "uuid": "a6c491447752458a941ec16028a97386",
+    "requiredApps": [
+      {
+        "name": "Microsoft Edge",
+        "url": "https://www.microsoft.com/edge"
+      }
+    ]
+  },
+  {
+    "slug": "export-safari-reading-list",
+    "name": "Export Safari Reading List",
+    "emoji": "⤴️",
+    "category": "Brain Food",
+    "uuid": "e68c511e5f8246aa8f5a683e8fdfeae8",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "readinglist2reminders",
+    "name": "ReadingList2Reminders",
+    "emoji": "🔄",
+    "category": "Brain Food",
+    "uuid": "41a57c4734c541059e3d5bd96d713602",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "export-youtube-watch-later-list",
+    "name": "Export YouTube Watch Later List",
+    "emoji": "⤴️",
+    "category": "Brain Food",
+    "uuid": "34fd56edebdc46fbab609b26ea62bf7e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "watchlaterlist2reminders",
+    "name": "WatchLaterList2Reminders",
+    "emoji": "🔄",
+    "category": "Brain Food",
+    "uuid": "98ff39d50db446ce84a07b381504f68f",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "brain-food-delivery",
+    "name": "Brain Food Delivery",
+    "emoji": "🚛",
+    "category": "Brain Food",
+    "uuid": "5d7f36a60a594b4d98e655f7d7b8609f",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Caffeinated",
+        "url": "https://caffeinated.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "add-to-watch-later-list",
+    "name": "Add to Watch Later List",
+    "emoji": "📽️",
+    "category": "Brain Food",
+    "uuid": "26d98afcd5a24a4b9dd4a698b1f1404e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "add-to-reading-list",
+    "name": "Add to Reading List",
+    "emoji": "📗",
+    "category": "Brain Food",
+    "uuid": "5752c23bbf894897a00b64279cb1fd7f",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "add-to-book-list",
+    "name": "Add to Book List",
+    "emoji": "📚",
+    "category": "Brain Food",
+    "uuid": "dd3a767f73db47c3b84b411b8d749acb"
+  },
+  {
+    "slug": "add-to-movie-and-tv-list",
+    "name": "Add to Movie & TV List",
+    "emoji": "🎬",
+    "category": "Brain Food",
+    "uuid": "5c7b7d8f7e174eb5af46c956cfc67c21",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "add-to-podcast-list",
+    "name": "Add to Podcast List",
+    "emoji": "🎤",
+    "category": "Brain Food",
+    "uuid": "026c443b31744d09aaa0c2074089f703"
+  },
+  {
+    "slug": "enjoy-quality-brain-food",
+    "name": "Enjoy Quality Brain Food",
+    "emoji": "😉",
+    "category": "Brain Food",
+    "uuid": "aee50479d8784f469364df983e16bf7e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "mindware-upgrade",
+    "name": "Mindware Upgrade",
+    "emoji": "🏁",
+    "category": "Brain Food",
+    "uuid": "7d8a6134a01d4d428fcc7456c783ea74",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "the-enoughists-pick",
+    "name": "The Enoughist's Pick",
+    "emoji": "🤌",
+    "category": "Brain Food",
+    "uuid": "7cc8b4e55e3147f28cf4318fb1c1469c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "email-newsletter",
+    "name": "Email Newsletter",
+    "emoji": "📧",
+    "category": "Brain Food",
+    "uuid": "9063acded8ee42d4b308731d7d0657d5"
+  },
+  {
+    "slug": "read-random-saved-article",
+    "name": "Read Random Saved Article",
+    "emoji": "🍁",
+    "category": "Brain Food",
+    "uuid": "2db315f09bdf4a86b1def4db36033560"
+  },
+  {
+    "slug": "search-web",
+    "name": "Search Web",
+    "emoji": "🌐",
+    "category": "Brain Food",
+    "uuid": "023c6f786b7d442aa339835f740b6db3"
+  },
+  {
+    "slug": "goodreads",
+    "name": "Goodreads",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "a7cd29606e4c404996d924451465fcf3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "floccus",
+    "name": "Floccus",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "2b6d039840c04da288a1e3c7125fd562",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "edge",
+    "name": "Edge",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "24d4a0c1e41e4e21b1f50a2ae63d14ae",
+    "requiredApps": [
+      {
+        "name": "Microsoft Edge",
+        "url": "https://www.microsoft.com/edge"
+      }
+    ]
+  },
+  {
+    "slug": "get-book-excerpts-from-random-page",
+    "name": "Get Book Excerpts from Random Page",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "db1242122fb946f1b53ca2c7ed7543ac"
+  },
+  {
+    "slug": "add-to-book-list-via-google-books",
+    "name": "_Add to Book List via Google Books",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "0b25243e13d4421392d67058606fed29"
+  },
+  {
+    "slug": "add-to-book-list-via-open-library",
+    "name": "_Add to Book List via Open Library",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "37f57ab39dfc46bcaece4165b33d1a61"
+  },
+  {
+    "slug": "get-brain-food-reminder",
+    "name": "Get Brain Food Reminder",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "bebc19b9700a4ec3b6494bf12625a46e"
+  },
+  {
+    "slug": "get-brain-food-title-and-url",
+    "name": "Get Brain Food Title and URL",
+    "emoji": "",
+    "category": "Brain Food",
+    "uuid": "27b63a2f17984a2ab93b9510cc72ba42"
+  },
+  {
+    "slug": "deep-work-machine",
+    "name": "Deep Work Machine",
+    "emoji": "🍅",
+    "category": "Deep Work Machine",
+    "uuid": "3e1bca715d77455f85f1f652f1d5d23d",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "deep-work-session",
+    "name": "Deep Work Session",
+    "emoji": "⚛️",
+    "category": "Deep Work Machine",
+    "uuid": "57fbdd4a32b546a8af1c534c31171b8c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "end-of-day-ritual",
+    "name": "End-of-Day Ritual",
+    "emoji": "😌",
+    "category": "Deep Work Machine",
+    "uuid": "27598ed8bf0848e2ad0c837f55fe4ef0",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "log-flow-counts",
+    "name": "Log Flow Counts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "2caac6d2e93746f5a3ec8f0159cbe862",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "speak-flow-and-word-counts",
+    "name": "Speak Flow & Word Counts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "b2ab3542f098450aabe206975dc181e5"
+  },
+  {
+    "slug": "show-flow-and-word-counts",
+    "name": "Show Flow & Word Counts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "f01ef022144f49f28f342674192ae520",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Any Text",
+        "url": "https://sindresorhus.com/any-text"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "plot-number-of-words",
+    "name": "_Plot Number of Words",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "e08f5696052b4faeb6b365bee2c6c0d8"
+  },
+  {
+    "slug": "plot-number-of-flows",
+    "name": "_Plot Number of Flows",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "7d1536bb9c01415ab3dd5196e9d03a60"
+  },
+  {
+    "slug": "plot-deep-work-machine-charts",
+    "name": "_Plot Deep Work Machine Charts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "cfa2628a91b04ac0b489fa54ddfc6e81",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Charty",
+        "url": "https://chartyios.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-daily-flow-and-word-counts",
+    "name": "_Get Daily Flow & Word Counts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "8f3ff51f7e3d428b8d7a576426beae14",
+    "requiredApps": [
+      {
+        "name": "a-Shell",
+        "url": "https://holzschu.github.io/a-Shell_iOS"
+      }
+    ]
+  },
+  {
+    "slug": "export-monthly-flow-and-word-counts",
+    "name": "_Export Monthly Flow & Word Counts",
+    "emoji": "",
+    "category": "Deep Work Machine",
+    "uuid": "7a9fef5ed4084952b830a24f4b5cf1af",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "backup-my-repos",
+    "name": "Backup My Repos",
+    "emoji": "💾",
+    "category": "Getting Things Done",
+    "uuid": "c1e43d14885b481dbf3e5090a72388d3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "plan-my-day",
+    "name": "Plan My Day",
+    "emoji": "🗓️",
+    "category": "Getting Things Done",
+    "uuid": "e9de0e9d908148a9888ac248172983b0",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      }
+    ]
+  },
+  {
+    "slug": "view-todays-tasks",
+    "name": "View Today's Tasks",
+    "emoji": "☑️",
+    "category": "Getting Things Done",
+    "uuid": "9728b44df29f4b0f9378d91f871819a7"
+  },
+  {
+    "slug": "url-shortener",
+    "name": "URL Shortener",
+    "emoji": "🔗",
+    "category": "Getting Things Done",
+    "uuid": "2860e5ba6cb249288957802fdb433398",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "hypertext-constructor",
+    "name": "Hypertext Constructor",
+    "emoji": "🖇️",
+    "category": "Getting Things Done",
+    "uuid": "061e8e92788d469fa5af699cca06afd3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "gmail",
+    "name": "Gmail",
+    "emoji": "📨",
+    "category": "Getting Things Done",
+    "uuid": "355207b5323f4f2aa2f67192ab641c84"
+  },
+  {
+    "slug": "pay-the-bills",
+    "name": "Pay the Bills",
+    "emoji": "💳",
+    "category": "Getting Things Done",
+    "uuid": "69ac495c159b4bbab0f0e967751d49d1"
+  },
+  {
+    "slug": "upload-to-imgur",
+    "name": "Upload to Imgur",
+    "emoji": "⬆️",
+    "category": "Getting Things Done",
+    "uuid": "5cd308a48f764a6e9c5d93f748c7757e"
+  },
+  {
+    "slug": "ask-ai-anything",
+    "name": "Ask AI Anything",
+    "emoji": "🤖",
+    "category": "Getting Things Done",
+    "uuid": "fcdbe21d6c214f54945e19a49d7840d9",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "ask-chatgpt",
+    "name": "Ask ChatGPT",
+    "emoji": "",
+    "category": "Getting Things Done",
+    "uuid": "0af8ab27656747f2bf57a1d60bffe320",
+    "requiredApps": [
+      {
+        "name": "ChatGPT",
+        "url": "https://openai.com/chatgpt/overview"
+      }
+    ]
+  },
+  {
+    "slug": "set-day-progress-timer",
+    "name": "Set Day Progress Timer",
+    "emoji": "",
+    "category": "Getting Things Done",
+    "uuid": "347a102873134caeb1e596b401fdd4fb",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "show-day-progress",
+    "name": "Show Day Progress",
+    "emoji": "",
+    "category": "Getting Things Done",
+    "uuid": "8dda93fd9be948ab9eee3a8777ff778c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Pushcut",
+        "url": "https://www.pushcut.io"
+      },
+      {
+        "name": "Charty",
+        "url": "https://chartyios.app"
+      },
+      {
+        "name": "Any Text",
+        "url": "https://sindresorhus.com/any-text"
+      }
+    ]
+  },
+  {
+    "slug": "show-year-progress",
+    "name": "Show Year Progress",
+    "emoji": "",
+    "category": "Getting Things Done",
+    "uuid": "eb1394bd14dc493798667175c2be996b",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-undone-action-items",
+    "name": "_Get Undone Action Items",
+    "emoji": "",
+    "category": "Getting Things Done",
+    "uuid": "55a0de36f5d5459d80190d1510e8d2e5"
+  },
+  {
+    "slug": "my-life-automation",
+    "name": "My Life Automation",
+    "emoji": "⚙️",
+    "category": "My Life Automation",
+    "uuid": "6ca019bff1414bf9aa2a2e6ae63e1756",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "check-life-automation",
+    "name": "Check Life Automation",
+    "emoji": "✔",
+    "category": "My Life Automation",
+    "uuid": "a598af171c544222be0ef74fe8fd4fe1",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-life-automation-shortcuts",
+    "name": "Get Life Automation Shortcuts",
+    "emoji": "",
+    "category": "My Life Automation",
+    "uuid": "b3dec979e091481b90ca9d33030a220f"
+  },
+  {
+    "slug": "batch-run-life-automation-shortcuts",
+    "name": "_Batch Run Life Automation Shortcuts",
+    "emoji": "",
+    "category": "My Life Automation",
+    "uuid": "1b274563be4e45399161be570fce3164",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "log-deep-work-machine-stats",
+    "name": "Log Deep Work Machine Stats",
+    "emoji": "",
+    "category": "Automation - Daily",
+    "uuid": "1ed1f701c4f745388657c368f2f8c657"
+  },
+  {
+    "slug": "cleanup-data-jar",
+    "name": "Cleanup Data Jar",
+    "emoji": "",
+    "category": "Automation - Daily",
+    "uuid": "74a6ab9a14504d4d99a60240dfbe2196",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "sundayweekly-mindware-update",
+    "name": "Sunday::Weekly Mindware Update",
+    "emoji": "",
+    "category": "Automation - Weekly",
+    "uuid": "b20750e3a2c4447a8c73b99d9230e73b"
+  },
+  {
+    "slug": "5deep-work-machine",
+    "name": "5::Deep Work Machine",
+    "emoji": "",
+    "category": "Automation - Monthly",
+    "uuid": "f3cd8fe87cef4d6f8b73a6492b915f7b",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "15export-reading-and-watch-later-list",
+    "name": "15::Export Reading & Watch Later List",
+    "emoji": "",
+    "category": "Automation - Monthly",
+    "uuid": "92e086baec9d42d6ac8213e15dbf55ac"
+  },
+  {
+    "slug": "when-my-apple-device-is-connected-to-power",
+    "name": "When my Apple device is connected to power",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "288a338132c34e48887fff0dd89765dc",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "when-my-apple-device-is-disconnected-from-power",
+    "name": "When my Apple device is disconnected from power",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "07a192511bce448c966dc361a7c569bc",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "when-labeled-apps-are-opened",
+    "name": "When labeled apps are opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "86d1dd0fb69640698a9a3e64b06ad63d",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "when-labeled-apps-are-closed",
+    "name": "When labeled apps are closed",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "3fabf9e4362f4bc2a427cc717d55268d",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "ask-if-connect-to-ble-audio-device",
+    "name": "Ask If Connect to BLE Audio Device",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "db17cfede13e4f97b88b83b51b079875"
+  },
+  {
+    "slug": "ask-if-connect-to-ble-audio-device-kernel",
+    "name": "Ask If Connect to BLE Audio Device - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "9df8d9bd8841480b81de802af66b81f0",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "when-obsidian-is-opened",
+    "name": "When \"Obsidian\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "d73c9efa798d4a66be97ce2937c026e4"
+  },
+  {
+    "slug": "when-obsidian-is-opened-kernel",
+    "name": "When \"Obsidian\" is opened - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "d9abb91894b142f7bb5b492c19faefbb"
+  },
+  {
+    "slug": "when-brainwave-is-opened",
+    "name": "When \"BrainWave\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "b96e3569636a4bc1b47d624f31fc2650"
+  },
+  {
+    "slug": "when-brainwave-is-opened-kernel",
+    "name": "When \"BrainWave\" is opened - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "ce5332f2651b4aecab2981e64cb423c3"
+  },
+  {
+    "slug": "when-flagged-apps-are-opened",
+    "name": "When flagged apps are opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "ebaab4664cec4cb98ca2b89b7fa337ba"
+  },
+  {
+    "slug": "when-flagged-apps-are-opened-kernel",
+    "name": "When flagged apps are opened - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "28017fc571ce4c67a60bb98de5ac011a"
+  },
+  {
+    "slug": "when-komoot-is-opened",
+    "name": "When \"Komoot\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "5524581858e7407abcebb083bb66e2a8"
+  },
+  {
+    "slug": "when-komoot-is-opened-kernel",
+    "name": "When \"Komoot\" is opened - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "e25711100a2346bcaef8aca3f3dd5aef"
+  },
+  {
+    "slug": "when-reminders-is-opened-or-closed",
+    "name": "When \"Reminders\" is opened or closed",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "72b94123b5ee4cca891fe250f519ac9e"
+  },
+  {
+    "slug": "when-reminders-is-opened-or-closed-kernel",
+    "name": "When \"Reminders\" is opened or closed - Kernel",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "aa6cb5efe735441b9f6bdefebd7a4a6a"
+  },
+  {
+    "slug": "when-photos-is-opened",
+    "name": "When \"Photos\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "c4a8ae049ad547ca93fdbd63c2ad3a82"
+  },
+  {
+    "slug": "when-anki-is-opened",
+    "name": "When \"Anki\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "629b81c20cf44444814ecd1286013cb9"
+  },
+  {
+    "slug": "when-kleinanzeigen-is-opened",
+    "name": "When \"Kleinanzeigen\" is opened",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "4ae99c0c0204447c83f8dcddaaf17ae5",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "when-renpho-health-is-opened-or-closed",
+    "name": "When \"Renpho Health\" is opened or closed",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "4e0b685580cb426ebecd397a5a151dcb",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "when-turning-my-focus-mode-on",
+    "name": "When turning my focus mode on",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "2d0241e372114b5eb63d6ca1e379aff4",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      },
+      {
+        "name": "Pushcut",
+        "url": "https://www.pushcut.io"
+      }
+    ]
+  },
+  {
+    "slug": "when-any-alarm-goes-off",
+    "name": "When Any Alarm Goes Off",
+    "emoji": "",
+    "category": "Automation Modules",
+    "uuid": "09a92026140b4197ab6011c3c897adb6"
+  },
+  {
+    "slug": "add-clickable-url-to-inbox-items",
+    "name": "Add Clickable URL to Inbox Items",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "eefa2d9aa447443a8f5bb5fe40e64ac0"
+  },
+  {
+    "slug": "organize-idea-capture-inbox",
+    "name": "Organize Idea Capture Inbox",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "f738ddf201ea47ad9e817af4b101b6f2",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "inbox-zero",
+    "name": "Inbox Zero",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "0d96ea2eb90a4dd89ed3344570128259"
+  },
+  {
+    "slug": "set-default-values-for-task-lists",
+    "name": "Set Default Values for Task Lists",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "e96a263ee8d44666b2981afed08927fc",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "remember-to-share-shortcutomation",
+    "name": "Remember to Share Shortcutomation",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "93a835d3caef4a51944ca9737dd9a771",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "remove-completed-reminders",
+    "name": "Remove Completed Reminders",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "9ab3d78855584badb9712b55ff54380e",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "organize-brain-food-lists",
+    "name": "Organize Brain Food Lists",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "4f5d1a5d5d864e549ec8b7518906225c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "organize-evergreen-lists",
+    "name": "Organize Evergreen Lists",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "af00af73dd674e709ab8629d9351bddb"
+  },
+  {
+    "slug": "backup-my-reminders",
+    "name": "Backup My Reminders",
+    "emoji": "",
+    "category": "When Reminders is opened or closed",
+    "uuid": "6f7838399fd444af804163adcc2d268c",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "remember-to-sharpen-the-saw",
+    "name": "Remember to Sharpen the Saw",
+    "emoji": "",
+    "category": "When Calendar is opened",
+    "uuid": "7ed26a692c1047ddb982bcbc657fcb37",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "remember-to-charge-sport-edevices",
+    "name": "Remember to Charge Sport eDevices",
+    "emoji": "",
+    "category": "When Calendar is opened",
+    "uuid": "cf323189638042dd87d12224d1bfbbc4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "cleanup-calendar",
+    "name": "Cleanup Calendar",
+    "emoji": "",
+    "category": "When Calendar is opened",
+    "uuid": "79728ef7b72c4587bcec8b9ab2d8e120",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "organize-my-photos",
+    "name": "Organize My Photos",
+    "emoji": "🎞️",
+    "category": "When Photos is opened",
+    "uuid": "c8ca3c03aa484c9f875439d3031c1c80",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "cleanup-album",
+    "name": "Cleanup Album",
+    "emoji": "",
+    "category": "When Photos is opened",
+    "uuid": "4cc38eaf34084e8783887789176faa7d"
+  },
+  {
+    "slug": "template-folder-shortcuts-header",
+    "name": "Template - Folder Shortcuts Header",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "ec0eeac667104dd49699c4518e138912"
+  },
+  {
+    "slug": "template-voice-assistant",
+    "name": "Template - Voice Assistant",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "667af6c6397641dc96797f1d6ef7da77",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-morning-and-evening-routine",
+    "name": "Template - Morning and Evening Routine",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "cd322586976844508c6d055299fba2cb",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-rich-notification",
+    "name": "Template - Rich Notification",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "b678456a503a4859884f26c946b0a887",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-notification-for-quotes",
+    "name": "Template - Notification for Quotes",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "6f432d1fa87c43478973a5d50629d78b",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-notification-for-reddit",
+    "name": "Template - Notification for Reddit",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "afbda7bf7ec34d51b99eb6a31c5d8c5f",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-view-image-in-files",
+    "name": "Template - View Image in Files",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "bc454e2ba29149149c9843009cd1dca9"
+  },
+  {
+    "slug": "template-run-commands-in-terminal",
+    "name": "Template - Run Commands in Terminal",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "67b3e9c131b54ee7ae5064d241dbcdda"
+  },
+  {
+    "slug": "template-complete",
+    "name": "Template - Complete!",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "0e70549bc6c74598b21dd9c1b11c310c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "template-email",
+    "name": "Template - Email",
+    "emoji": "",
+    "category": "Template Shortcuts",
+    "uuid": "6b65180df06a4c3d8848f870cd69cac6",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "get-index-of-list-item",
+    "name": "Get Index of List Item",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "8c0ebdbf98c54b58a14cc71b6f7073ff"
+  },
+  {
+    "slug": "odd-or-even-number",
+    "name": "Odd or Even Number",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "e89e3b02adf5461984fbc42938e4420f"
+  },
+  {
+    "slug": "test-markdown2richtext",
+    "name": "Test Markdown2RichText",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "fd232a68a3124faba0c4f58c87bac75d"
+  },
+  {
+    "slug": "generate-and-play-audio-files",
+    "name": "Generate & Play Audio File(s)",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "e9261257a54542cea2629e274a61823a"
+  },
+  {
+    "slug": "tab",
+    "name": "Tab",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "b21d1519964541c79de984e3011caf5f"
+  },
+  {
+    "slug": "set-boolean-value-to-dictionary",
+    "name": "Set Boolean Value to Dictionary",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "9bde1b856168494a90c84430f8e27549"
+  },
+  {
+    "slug": "append-to-dictionary",
+    "name": "Append To Dictionary",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "a137b21c74294d30a8bc60e623351ce8"
+  },
+  {
+    "slug": "dictionary-of-dictionary",
+    "name": "Dictionary of Dictionary",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "e24b13cbd25e4aec96a89a8e22e6c763"
+  },
+  {
+    "slug": "adding-to-a-dictionary-txt",
+    "name": "Adding To A Dictionary - txt",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "44a74fefbd0a4c1eabca8effa0273ef5"
+  },
+  {
+    "slug": "adding-to-a-dictionary-json",
+    "name": "Adding To A Dictionary - json",
+    "emoji": "",
+    "category": "Shortcuts Tutorials",
+    "uuid": "1b9dfdcb9f83423dbc5ce922e402f070"
+  },
+  {
+    "slug": "build-run-shortcut-url",
+    "name": "Build Run Shortcut URL",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "0ef9d6e5326741a3b8122c11a0e7babe",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-shortcuts-library-custom-folders",
+    "name": "Get Shortcuts Library Custom Folders",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "baa6087309a64310a1890be46deaf543"
+  },
+  {
+    "slug": "archive-all-shortcuts-with-folders",
+    "name": "Archive All Shortcuts (with Folders)",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "adde6c7ce8be4ca2bb4d1ef9b6116e16"
+  },
+  {
+    "slug": "archive-all-shortcuts-without-folders",
+    "name": "Archive All Shortcuts (without Folders)",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "1b9b13f1927546fa97da6ee336edb84f"
+  },
+  {
+    "slug": "write-shortcut-progress",
+    "name": "_Write Shortcut Progress",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "d77f7d66309b4ada959c7771beda7ff3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "read-shortcut-progress",
+    "name": "_Read Shortcut Progress",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "95fcc9644d694d879320a7db22222758",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "batch-run-shortcuts-continuous",
+    "name": "_Batch Run Shortcuts (Continuous)",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "ab293384088a40c5bf7231180be90853"
+  },
+  {
+    "slug": "batch-run-shortcuts-discrete",
+    "name": "_Batch Run Shortcuts (Discrete)",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "80bad6eb6f3b4d9caf5087f8b377b208",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "import-shortcut",
+    "name": "_Import Shortcut",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "d36b784c348c4a199b452b6adbaef90c"
+  },
+  {
+    "slug": "filter-shortcuts",
+    "name": "_Filter Shortcuts",
+    "emoji": "",
+    "category": "Shortcuts of Shortcuts",
+    "uuid": "4feff11c000d41bbb246f2fd563e2c9b"
+  },
+  {
+    "slug": "backup-my-shortcuts-library",
+    "name": "Backup My Shortcuts Library",
+    "emoji": "💾",
+    "category": "Shortcutomation Helpers",
+    "uuid": "97549af488bd4fbd8cca90cb6fcf7db8",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Caffeinated",
+        "url": "https://caffeinated.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "shorcutomation-export-required-apps",
+    "name": "Shorcutomation - Export Required Apps",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "b4afcad9700a4cc2aaf90a298300a7d7",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "shortcutomation-shortcut-to-plist",
+    "name": "Shortcutomation - shortcut to plist",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "c5bb4a21b9bf4469bea94ff6816685ab"
+  },
+  {
+    "slug": "shortcutomation-shortcut-to-json",
+    "name": "Shortcutomation - shortcut to json",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "2838e6fc4af84415b3562430811ed2db"
+  },
+  {
+    "slug": "shortcutomation-shortcut-to-html",
+    "name": "Shortcutomation - shortcut to html",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "b24f7fefe9c74bbc999f1b1460d71ec7"
+  },
+  {
+    "slug": "shorcutomation-calculate-gallery-fun-stats",
+    "name": "Shorcutomation - Calculate Gallery Fun Stats",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "e639059cbd14434cadf430de0616cbee",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "shorcutomation-generate-gallery-folder-tree",
+    "name": "Shorcutomation - Generate Gallery Folder Tree",
+    "emoji": "",
+    "category": "Shortcutomation Helpers",
+    "uuid": "636ec2da63f54130b44b88eb36993355",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "prep-for-backup",
+    "name": "Prep for Backup",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "1ad7e7f01db74ec5b5107eca100e5018",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "last-update-snapshot",
+    "name": "Last Update Snapshot",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "8163b9bcba3b421a831285928d30fbd8",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "filter-shortcuts-categories",
+    "name": "Filter Shortcuts Categories",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "bd3bd4c6267b44a196298ee869b29223",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "extract-all-shortcuts-metadata",
+    "name": "Extract All Shortcuts Metadata",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "ba969778efd149b2a4f019d2f47b1972",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "backup-all-shortcuts",
+    "name": "Backup All Shortcuts",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "482792d856534ba4a7c42403866325b8",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "create-readme",
+    "name": "Create README",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "6c6f2b7d7bef4261aed5692e9919fefd",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "create-changelog",
+    "name": "Create CHANGELOG",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "2b11626351b0480dbbf9e588155e805a",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "create-license",
+    "name": "Create LICENSE",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "9d9d73eaed3949819c0d7f33d99a695a"
+  },
+  {
+    "slug": "push-to-remote-repo",
+    "name": "Push to Remote Repo",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "de33f035bba54b7caf046c3fbd5d189e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "finalize-backup",
+    "name": "Finalize Backup",
+    "emoji": "",
+    "category": "Shortcutomation",
+    "uuid": "d320f81214b2444ca3c74de8b6ef1e71",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "gate-index-of-list-item-last-occurrence",
+    "name": "Gate Index of List Item - Last Occurrence",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "bee75db372c34158a93a58db3f141584"
+  },
+  {
+    "slug": "get-index-of-list-item-first-occurrence",
+    "name": "Get Index of List Item - First Occurrence",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "9d604793485f4007877f1359d5aa4a6c"
+  },
+  {
+    "slug": "detect-system-language",
+    "name": "Detect System Language",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "30dff9034e2f493a96fdc487f676e03b"
+  },
+  {
+    "slug": "notify-copied-to-clipboard",
+    "name": "Notify \"Copied to Clipboard!\"",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "d06399af6f4e4e66ba475863bab3b420",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "generate-random-color-hex-code",
+    "name": "Generate Random Color Hex Code",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "e7a5e45fa66a4c7c97f3933f04afc316"
+  },
+  {
+    "slug": "generate-random-color-rgb-code",
+    "name": "Generate Random Color RGB Code",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "96845e2ca9dd4f969478ee601a8b6bff"
+  },
+  {
+    "slug": "take-screenshot",
+    "name": "Take Screenshot",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "8d63075c1da14ce68d8cc87ef67abc45",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "progress-bar-maker-with-text",
+    "name": "Progress Bar Maker (with Text)",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "95008ac162b740c8998b091256081972"
+  },
+  {
+    "slug": "progress-bar-maker-without-text",
+    "name": "Progress Bar Maker (without Text)",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "21ed9f96572040eb8112e253981a5ca7"
+  },
+  {
+    "slug": "filter-by-keyword",
+    "name": "Filter By Keyword",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "88142ea98dfb455fbad577bb31edaaf5"
+  },
+  {
+    "slug": "check-shortcut-last-run-time",
+    "name": "Check Shortcut Last Run Time",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "622b552f3471409996516f98521a1034",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "you-are-all-set",
+    "name": "You Are All Set",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "d003a96b89d24297a94deff7de9610b8"
+  },
+  {
+    "slug": "wait-until-right-swipe",
+    "name": "Wait until right swipe",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "64e5075803b5441bb3f11460a123e809"
+  },
+  {
+    "slug": "run-javascript-code",
+    "name": "Run JavaScript Code",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "6c10b0ef154f4e428dc8987f004fc479"
+  },
+  {
+    "slug": "random-number-generator",
+    "name": "Random Number Generator",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "d319bb440a0944138288bd430a7602af"
+  },
+  {
+    "slug": "de-duplicate-list",
+    "name": "De-Duplicate List",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "fd4eebb540dc49588569928d66013539"
+  },
+  {
+    "slug": "format-text-with-text-divider-pair",
+    "name": "Format Text with Text Divider Pair",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "97813d4ab7364d64a8e8380b8b74a700",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "open-app",
+    "name": "Open App",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "b40e4481c39546f7b565960174fcbbe7"
+  },
+  {
+    "slug": "batch-open-urls",
+    "name": "Batch Open URLs",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "20d57ff2816a410ab28ea52a1cad8175"
+  },
+  {
+    "slug": "create-a-dictionary",
+    "name": "Create A Dictionary",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "39823e4a437a4c2eaf7adfc9c20f3f29",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "log-device-info",
+    "name": "_Log Device Info",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "63ccde649ff24a80af81c4e3870c2ef3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-list-item-by-day-of-week",
+    "name": "_Get List Item by Day of Week",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "c69a841bd6154d81ba10b312e2121c59"
+  },
+  {
+    "slug": "display-full-image",
+    "name": "_Display Full Image",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "0770034cab2a4d68a36940a9d06bde13"
+  },
+  {
+    "slug": "smart-quote-wrapper",
+    "name": "_Smart Quote Wrapper",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "6e138f6313ad44658c3a2d42ad242b33"
+  },
+  {
+    "slug": "choose-ai-prompt",
+    "name": "Choose AI Prompt",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "32a13a707c204e5a95cae14ded5b99a4"
+  },
+  {
+    "slug": "select-date",
+    "name": "Select Date",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "a9a520ab9d3c4e16abf22406dc10699e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "isonline",
+    "name": "isOnline",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "d465ee265ee94273a11b2bc88b6dcd71"
+  },
+  {
+    "slug": "ishome",
+    "name": "isHome",
+    "emoji": "",
+    "category": "Utilities",
+    "uuid": "45fd09b22796409bb51642d52c75acd0",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "sanity-check-markdown-content",
+    "name": "Sanity Check Markdown Content",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "c5fe9efdeacf491cb741fbb8b53d44b0"
+  },
+  {
+    "slug": "sanity-check-json-string",
+    "name": "Sanity Check JSON String",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "a9d5c77f58cb4bef9d5aab6ba55b7495"
+  },
+  {
+    "slug": "decimals-percentage",
+    "name": "Decimals → Percentage",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "5a98562b353e43f2861d722492ac5794"
+  },
+  {
+    "slug": "percentage-decimals",
+    "name": "Percentage → Decimals",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "b5def881ea2240d0b57a0db328c24ce6"
+  },
+  {
+    "slug": "remove-duplicate-lines-slow-order-preserved",
+    "name": "Remove Duplicate Lines (Slow, Order Preserved)",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "40bb7260d4204e8da1916daf9eca979f"
+  },
+  {
+    "slug": "remove-duplicate-lines-fast-order-not-preserved",
+    "name": "Remove Duplicate Lines (Fast, Order Not Preserved)",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "8b9466a48c02400fbe88798f3a38d7d4"
+  },
+  {
+    "slug": "formattedduration2seconds",
+    "name": "FormattedDuration2Seconds",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "9930f89d674a4e4fa732daa4780948a2"
+  },
+  {
+    "slug": "iso8601duration2numbers",
+    "name": "ISO8601Duration2Numbers",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "9cf5e5c20c6b404e97f6e54ad841844c"
+  },
+  {
+    "slug": "strip-leading-symbol",
+    "name": "Strip Leading Symbol",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "d1d9099a70cb40a0abd9f8fd09eb7e7f"
+  },
+  {
+    "slug": "remove-emojis",
+    "name": "Remove Emojis",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "b7203b2ae9ad48e99d666c6f7a9aeb0d"
+  },
+  {
+    "slug": "create-query-item-from-dictionary-no-encoding",
+    "name": "Create Query Item from Dictionary (No Encoding)",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "e6ad2bb7c71042e4ac5b3127bd7a4963"
+  },
+  {
+    "slug": "encode-search-query",
+    "name": "Encode Search Query",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "1c4469425f684e83be705eaf9ac2f85c"
+  },
+  {
+    "slug": "slugify-text",
+    "name": "Slugify Text",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "419de2ab323b43eaa0df5d7e5691c89e"
+  },
+  {
+    "slug": "remove-empty-lines",
+    "name": "Remove Empty Lines",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "06166effa6da408f937bf3983d09633a"
+  },
+  {
+    "slug": "get-plain-text-from-markdown",
+    "name": "Get Plain Text from Markdown",
+    "emoji": "",
+    "category": "Text Processing",
+    "uuid": "9cb9572b30044a60911b3dfca16f3b39"
+  },
+  {
+    "slug": "good-morning",
+    "name": "Good Morning",
+    "emoji": "",
+    "category": "Siri",
+    "uuid": "b961cd10ab804284a70fb257e123ecb0"
+  },
+  {
+    "slug": "good-evening",
+    "name": "Good Evening",
+    "emoji": "",
+    "category": "Siri",
+    "uuid": "184b5e815468436bac906463770b6aa1"
+  },
+  {
+    "slug": "reddit",
+    "name": "Reddit",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "fc2df873a13a42f68e3a3f4906f896fd",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "ptt",
+    "name": "PTT",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "097d5324bdcf46f68ffb6d76596fc5b7",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "dcard",
+    "name": "Dcard",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "22e6bb90761848ecb5c8d6e2e597663c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "sketchplanations",
+    "name": "Sketchplanations",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "2dacc077c96f4ee9bda4f372dac54684",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "nasa-media-library",
+    "name": "NASA Media Library",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "66299c20edc348f69343edee1276851f",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "huberman-lab",
+    "name": "Huberman Lab",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "f31e766058d546468651aa91a253e636",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify",
+    "name": "Spotify",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "95136f0758f9460a9ec3ad3d20ae217e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "emoji": "",
+    "category": "Deep Links",
+    "uuid": "61282a8d97124c3fa32dfc313716079a"
+  },
+  {
+    "slug": "build-google-search-url",
+    "name": "Build Google Search URL",
+    "emoji": "",
+    "category": "Build URLs",
+    "uuid": "cd5283f57ce04ddc9fa6138854453da2"
+  },
+  {
+    "slug": "build-google-maps-search-url",
+    "name": "Build Google Maps Search URL",
+    "emoji": "",
+    "category": "Build URLs",
+    "uuid": "e7d42a1653894b89a9a99bbb16df4391"
+  },
+  {
+    "slug": "summarize-youtube-video",
+    "name": "Summarize YouTube Video",
+    "emoji": "📌",
+    "category": "YouTube",
+    "uuid": "70331214598b43a8864826b3ebde3473"
+  },
+  {
+    "slug": "watch-youtube-video-without-ads",
+    "name": "Watch YouTube Video without Ads",
+    "emoji": "⚔️",
+    "category": "YouTube",
+    "uuid": "1e66f76b7c5c49e0b45999639356b7b2"
+  },
+  {
+    "slug": "extract-youtube-videoid-from-url",
+    "name": "_Extract YouTube VideoID from URL",
+    "emoji": "",
+    "category": "YouTube",
+    "uuid": "c3add6119805477fa5138862229f780e"
+  },
+  {
+    "slug": "youtube",
+    "name": "YouTube",
+    "emoji": "",
+    "category": "YouTube",
+    "uuid": "141f8a4b9af74553ba10bffa1c91457a",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-get-all-playlist-items",
+    "name": "YouTube - Get (All) Playlist Items",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "cbd3faadb11649598fb2d64d8d298f47",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-get-commentthreads-from-videoid",
+    "name": "YouTube - Get commentThreads from videoID",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "3b02c285f8da4168956951177099bba8",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-get-playlistitemid-from-videoid",
+    "name": "YouTube - Get playlistItemID from videoID",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "034b783a8cf04e07a866a4ce1e63f184",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-get-video-category-from-categoryid",
+    "name": "YouTube - Get Video Category from categoryId",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "a16c8efdaadb42d8bcd925ef6a730cbd",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-check-if-video-exists-in-playlist",
+    "name": "YouTube - Check If Video Exists In Playlist",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "b8ab701861dc4938a3094c3999137ac8",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-get-video-properties",
+    "name": "YouTube - Get Video Properties",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "a932ea245f1340959886944bb318a1bc",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "youtube-insert-playlist-item",
+    "name": "YouTube - Insert Playlist Item",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "13c8c3d03985466eb0a3d95086ded639"
+  },
+  {
+    "slug": "youtube-delete-playlist-item",
+    "name": "YouTube - Delete Playlist Item",
+    "emoji": "",
+    "category": "API - YouTube",
+    "uuid": "2517bd415f3342169697be078a33ed01",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "notion-create-a-database",
+    "name": "Notion - Create a database",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "5b64f5389d844424bf359ebe412cf4c4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "notion-query-a-database",
+    "name": "Notion - Query a database",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "8083259fed664794a553ce1cbe60b772",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "notion-retrieve-a-page-property-item",
+    "name": "Notion - Retrieve a page property item",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "75825e0d171642f2a91419cd17a2d887",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "notion-update-page-properties",
+    "name": "Notion - Update page properties",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "6abcfeb715a84ccea67462bbf593a53e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "retrieve-plain-text",
+    "name": "_Retrieve plain text",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "b37790dfe19e4dea97cedc4723561c28"
+  },
+  {
+    "slug": "overwrite-plain-text",
+    "name": "_Overwrite plain text",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "b95ffff23060419e812d3007ed906d2a"
+  },
+  {
+    "slug": "append-plain-text",
+    "name": "_Append plain text",
+    "emoji": "",
+    "category": "API - Notion",
+    "uuid": "112d8b3d862047c88910b8d704601dc1"
+  },
+  {
+    "slug": "review-my-training",
+    "name": "Review My Training",
+    "emoji": "💦",
+    "category": "API - Strava",
+    "uuid": "5cf94b31dd614ae290dec5554b1620fc",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "workouts-on-this-day",
+    "name": "Workouts On This Day",
+    "emoji": "🔭",
+    "category": "API - Strava",
+    "uuid": "d7b0ec6e1acc401285e000e9513daaa1",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "review-training-stats",
+    "name": "Review Training Stats",
+    "emoji": "📊",
+    "category": "API - Strava",
+    "uuid": "4cc48e78296041bdb7fa288a3d73714d",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "strava-get-activities-on-this-day",
+    "name": "Strava - Get Activities On This Day",
+    "emoji": "",
+    "category": "API - Strava",
+    "uuid": "cf9104d5b91041fa87a3c3341ca6a0e9"
+  },
+  {
+    "slug": "strava-list-activities-on-specific-date",
+    "name": "Strava - List Activities On Specific Date",
+    "emoji": "",
+    "category": "API - Strava",
+    "uuid": "e34c3d4d50ee411c87a3824807ddd5c6",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "strava-get-activity-stats",
+    "name": "Strava - Get Activity Stats",
+    "emoji": "",
+    "category": "API - Strava",
+    "uuid": "809cd342ee5441fd95450f22130d350a",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "github-list-commits",
+    "name": "GitHub - List commits",
+    "emoji": "",
+    "category": "API - GitHub",
+    "uuid": "7613d180aeef4af78eeb6b9b95750dd4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "gemini-generate-content",
+    "name": "Gemini - Generate Content",
+    "emoji": "",
+    "category": "API - Gemini",
+    "uuid": "789343a9e2004a328c0ee261b4e097c2",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "fetch-email-newsletter",
+    "name": "Fetch Email Newsletter",
+    "emoji": "📨",
+    "category": "API - Gmail",
+    "uuid": "ca1a8b5fa7ce45cab2ac614d0de0887e",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "gmail-get-number-of-listed-messages",
+    "name": "Gmail - Get number of listed messages",
+    "emoji": "",
+    "category": "API - Gmail",
+    "uuid": "6a87a6b2074e446baad8947b3456a37c",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "gsheets-batch-update-cells",
+    "name": "GSheets - Batch Update Cells",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "1dc9f7a5ebac4090aac8061b249e5c90"
+  },
+  {
+    "slug": "gsheets-add-sheet",
+    "name": "GSheets - Add Sheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "9d56de6857814bf0a13905a6d3fac0b0"
+  },
+  {
+    "slug": "gsheets-delete-sheet",
+    "name": "GSheets - Delete Sheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "bdb1734284464bc19f857e3417ab516c"
+  },
+  {
+    "slug": "gsheets-hide-sheet",
+    "name": "GSheets - Hide Sheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "3506085f8a7b488ab0f49ac80e67c7ce"
+  },
+  {
+    "slug": "gsheets-unhide-sheet",
+    "name": "GSheets - Unhide Sheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "8853c41f833a4bfc9ed3eca4b12bba5d"
+  },
+  {
+    "slug": "gsheets-clear-sheet",
+    "name": "GSheets - Clear Sheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "9a16c20d97aa4f4c9748ad334f1b948e"
+  },
+  {
+    "slug": "gsheets-get-spreadsheet",
+    "name": "GSheets - Get Spreadsheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "8adcf821f8e44a8a90dabcb26bbc27ba"
+  },
+  {
+    "slug": "gsheets-set-spreadsheet-title",
+    "name": "GSheets - Set Spreadsheet Title",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "11d0d1a3619347c3944cbaaab01a9819"
+  },
+  {
+    "slug": "gsheets-cleanup-spreadsheet",
+    "name": "GSheets - Cleanup Spreadsheet",
+    "emoji": "",
+    "category": "API - Google Sheets",
+    "uuid": "ed517e71bd1b45e9bfc21c0a97fc4915"
+  },
+  {
+    "slug": "gbooks-perform-book-search",
+    "name": "GBooks - Perform Book Search",
+    "emoji": "",
+    "category": "API - Google Books",
+    "uuid": "f867ac26ca574c818327375ea64f975d",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "google-images-perform-image-search",
+    "name": "Google Images - Perform Image Search",
+    "emoji": "",
+    "category": "API - Google Images",
+    "uuid": "0f92a178e0034474aa6d7bf5d6ef9637",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "get-time-zone-data",
+    "name": "Get Time Zone Data",
+    "emoji": "",
+    "category": "API - Google Time Zone",
+    "uuid": "10077105e32c4d97be8689ba41c65053",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-sunlight-times",
+    "name": "Get Sunlight Times",
+    "emoji": "",
+    "category": "API - Sunlight Times",
+    "uuid": "b4be6110ac584ffba5af5baadca00637"
+  },
+  {
+    "slug": "deepl-translate-text",
+    "name": "DeepL - Translate Text",
+    "emoji": "",
+    "category": "API - DeepL",
+    "uuid": "7d599a97e8a1492aaab2346379fc2fb4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "open-library-perform-book-search",
+    "name": "Open Library - Perform Book Search",
+    "emoji": "",
+    "category": "API - Open Library",
+    "uuid": "e73e83af488e4dbab7b7738abd6bf604",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "loc-perform-item-search",
+    "name": "LOC - Perform Item Search",
+    "emoji": "",
+    "category": "API - LOC",
+    "uuid": "7e720fbfd67240a18c491ecfe62cbfb4",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "play-spotify-music",
+    "name": "Play Spotify Music",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "29c120a74764400da8dc23cb3c62ebe3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotifyurl2spotifyuri",
+    "name": "_SpotifyURL2SpotifyURI",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "d0d28deca80d407ab4d46d52a4f1d870"
+  },
+  {
+    "slug": "play-spotify-content",
+    "name": "_Play Spotify Content",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "6f8f9236a91748d09ed7defe39b76f04",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-search-for-item",
+    "name": "Spotify - Search for Item",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "bf06046a19d8404ba284c1e2926502e7",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-get-episode-by-id",
+    "name": "Spotify - Get Episode By ID",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "2df2989a30e94d9eb9e4024cf9ba4711",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-get-current-device-id",
+    "name": "Spotify - Get Current Device ID",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "c15c2b989c9f4cda8433d0cef7bfddc9",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-transfer-playback",
+    "name": "Spotify - Transfer Playback",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "de27030c6fb04bb48a84cecfc15f7f64",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-toggle-playback-shuffle",
+    "name": "Spotify - Toggle Playback Shuffle",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "0127913bdb3e43aa861511736ce5b930",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-set-repeat-mode",
+    "name": "Spotify - Set Repeat Mode",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "5480e9ea08dc465681dce624fc9096d4",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-start-or-resume-playback",
+    "name": "Spotify - Start or Resume Playback",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "795eb68ed20b475eb75a9b8da189ca38",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-pause-playback",
+    "name": "Spotify - Pause Playback",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "73e919d9984d4237b2483a134ad57b62"
+  },
+  {
+    "slug": "spotify-set-playback-volume",
+    "name": "Spotify - Set Playback Volume",
+    "emoji": "",
+    "category": "API - Spotify",
+    "uuid": "539b0673d76649949affa9a45c4c6cd5",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "tmdb-find-by-external-id",
+    "name": "TMDb - Find By External ID",
+    "emoji": "",
+    "category": "API - TMDb",
+    "uuid": "e28e8e7c72af426bbe1e5c6f54238b58",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "tmdb-get-media-details-by-id",
+    "name": "TMDb - Get Media Details By ID",
+    "emoji": "",
+    "category": "API - TMDb",
+    "uuid": "d1fa778091d44cf7937b1dff92506818",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spoonacular-get-random-recipes",
+    "name": "Spoonacular - Get Random Recipes",
+    "emoji": "",
+    "category": "API - Spoonacular",
+    "uuid": "d36f83a42d494216b8f604250bb84345",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "spoonacular-create-recipe-card",
+    "name": "Spoonacular - Create Recipe Card",
+    "emoji": "",
+    "category": "API - Spoonacular",
+    "uuid": "a70727dc9f9f4acfbb0c66b590d803d8",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "nasa-get-random-apod-image",
+    "name": "NASA - Get Random APOD Image",
+    "emoji": "",
+    "category": "API - NASA",
+    "uuid": "ae16085f885848d29a3b671ad5701635"
+  },
+  {
+    "slug": "nasa-get-random-epic-gif",
+    "name": "NASA - Get Random EPIC GIF",
+    "emoji": "",
+    "category": "API - NASA",
+    "uuid": "43041543bc864293ae95104372aad879",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "nasa-get-random-mars-rover-photo",
+    "name": "NASA - Get Random Mars Rover Photo",
+    "emoji": "",
+    "category": "API - NASA",
+    "uuid": "36653a2eb23648fd969b746028a7cf32",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "flickr-search-photos",
+    "name": "Flickr - Search Photos",
+    "emoji": "",
+    "category": "API - Flickr",
+    "uuid": "5ca411005a4242a58f1bc33cbffded52",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "flickr-get-popular-photos",
+    "name": "Flickr - Get Popular Photos",
+    "emoji": "",
+    "category": "API - Flickr",
+    "uuid": "38acc866c18840bfa1ce5ea31da3ab1c",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "base58-enconding-for-photoid",
+    "name": "_Base58 Enconding for photoId",
+    "emoji": "",
+    "category": "API - Flickr",
+    "uuid": "bdfc5432066045b9b36da3142dc7287f"
+  },
+  {
+    "slug": "unsplash-search-photos",
+    "name": "Unsplash - Search Photos",
+    "emoji": "",
+    "category": "API - Unsplash",
+    "uuid": "20cbf6a43bab493d954cbe51f24fea51",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "unsplash-get-popular-photos",
+    "name": "Unsplash - Get Popular Photos",
+    "emoji": "",
+    "category": "API - Unsplash",
+    "uuid": "bcfa2e168e1b4c5e8b7d6c5f235d675d",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "reddit-get-random-subreddit-top-post",
+    "name": "Reddit - Get Random Subreddit Top Post",
+    "emoji": "",
+    "category": "API - Reddit",
+    "uuid": "377cad4564614901b2536dded957c302",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "hacker-news-get-random-top-story",
+    "name": "Hacker News - Get Random Top Story",
+    "emoji": "",
+    "category": "API - Hacker News",
+    "uuid": "482525311da04bb59eec651c20adc136"
+  },
+  {
+    "slug": "playing-card-shuffler",
+    "name": "Playing Card Shuffler",
+    "emoji": "",
+    "category": "API - Others",
+    "uuid": "51f91f1b052c47d0805b0471c4cf36f7"
+  },
+  {
+    "slug": "get-random-quote-from-zenquotes",
+    "name": "Get Random Quote from ZenQuotes",
+    "emoji": "",
+    "category": "API - Others",
+    "uuid": "7c60699372e24bfdad542825610b63bd"
+  },
+  {
+    "slug": "get-authorization-code",
+    "name": "_Get Authorization Code",
+    "emoji": "",
+    "category": "API OAuth Dancing",
+    "uuid": "66216e1e286e4627856b7e3ee5532779",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "exchange-tokens",
+    "name": "Exchange Tokens",
+    "emoji": "",
+    "category": "API OAuth Dancing",
+    "uuid": "c06fcd4b0d3d4821b73316d9a92b686e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-access-token",
+    "name": "Get Access Token",
+    "emoji": "",
+    "category": "API OAuth Dancing",
+    "uuid": "8b1f8f9a466245048b565e3dc61ac43e",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "round-time-to-nearest-xmin",
+    "name": "Round Time to Nearest Xmin",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "50f4c87e4e58411693d6be6fe9af881d"
+  },
+  {
+    "slug": "date2unixtimestamp",
+    "name": "Date2UnixTimestamp",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "9441144b83d447109ca64ef3af7e873c"
+  },
+  {
+    "slug": "unixtimestamp2date",
+    "name": "UnixTimestamp2Date",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "dcde610c06d24cc0890b1ad52392029f"
+  },
+  {
+    "slug": "isinthefirstweekofthemonth",
+    "name": "isInTheFirstWeekOfTheMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "28d6b38dba91414eba169fa262ec83b8"
+  },
+  {
+    "slug": "isinthelastweekofthemonth",
+    "name": "isInTheLastWeekOfTheMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "da263fb9063547df9166ba2f46622be8"
+  },
+  {
+    "slug": "isworkday",
+    "name": "isWorkday",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "fecc240b8e024c7287d1b079c4a513b5"
+  },
+  {
+    "slug": "ispublicholiday",
+    "name": "isPublicHoliday",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "e68d110ffe9042e9b8f10fc7697e6ca2"
+  },
+  {
+    "slug": "isweekend",
+    "name": "isWeekend",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "094e37f27b4e4c7ea98a9d542f7e7079"
+  },
+  {
+    "slug": "isstartofmonth",
+    "name": "isStartOfMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "32c20d0b518e44e691061446292974a2"
+  },
+  {
+    "slug": "isendofmonth",
+    "name": "isEndOfMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "d0e916be3430401ea3df3010dacdde76"
+  },
+  {
+    "slug": "isendofquarter",
+    "name": "isEndOfQuarter",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "981a511245bd4705a3ce1c2ca7802204"
+  },
+  {
+    "slug": "isnewyearsday",
+    "name": "isNewYear'sDay",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "1c1a85d359d24c6aa7e2c7187450e9ca"
+  },
+  {
+    "slug": "getquarternumber",
+    "name": "getQuarterNumber",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "f5c6e2bba1ca482b84f9d0a517a83df8"
+  },
+  {
+    "slug": "getweeknumber1",
+    "name": "getWeekNumber1",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "77790d8bf2ab483ab7bf81f9053efc1d"
+  },
+  {
+    "slug": "getweeknumber2",
+    "name": "getWeekNumber2",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "f9b5c3e755cd41db938af498e0fd01d6"
+  },
+  {
+    "slug": "getweekrange",
+    "name": "getWeekRange",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "45c950d903eb47c980fa9e473417901b"
+  },
+  {
+    "slug": "getfirstandlastdayofmonth",
+    "name": "getFirstAndLastDayOfMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "2b752f027ee24dd3bcabdc43df3da1af"
+  },
+  {
+    "slug": "getdayofweek",
+    "name": "getDayOfWeek",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "d53b3549cc48490c8ed16e27fbd7a8ed"
+  },
+  {
+    "slug": "getdayofmonth",
+    "name": "getDayOfMonth",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "90a2840c241243239b911a340b543736"
+  },
+  {
+    "slug": "get-sunday-of-the-week",
+    "name": "Get Sunday of the Week",
+    "emoji": "",
+    "category": "Date & Time",
+    "uuid": "602baa19ae0040f79a16168c91f05436"
+  },
+  {
+    "slug": "file-manager",
+    "name": "File Manager",
+    "emoji": "📂",
+    "category": "Files & Folders",
+    "uuid": "087ca7a96fcf4615bf1505cac1e21ab6"
+  },
+  {
+    "slug": "save-files",
+    "name": "Save Files",
+    "emoji": "📁",
+    "category": "Files & Folders",
+    "uuid": "f493bbb4922f4c25813adbdb8df62bf3"
+  },
+  {
+    "slug": "cleanup-folder",
+    "name": "Cleanup Folder",
+    "emoji": "",
+    "category": "Files & Folders",
+    "uuid": "b0fb623e9f4349d886991e20820689fb"
+  },
+  {
+    "slug": "create-empty-file-or-clear-file",
+    "name": "Create Empty File or Clear File",
+    "emoji": "",
+    "category": "Files & Folders",
+    "uuid": "2e00edce04ce4e4d832c138ce9344318"
+  },
+  {
+    "slug": "move-file-or-folder",
+    "name": "Move File or Folder",
+    "emoji": "",
+    "category": "Files & Folders",
+    "uuid": "3a3d7174e7c8448e81a6a0e711616dde"
+  },
+  {
+    "slug": "islist",
+    "name": "isList",
+    "emoji": "",
+    "category": "List",
+    "uuid": "af08d5e1b2f2492ba9451b0bc3ed26e5"
+  },
+  {
+    "slug": "count-occurrence-of-unique-list-items",
+    "name": "Count Occurrence Of Unique List Items",
+    "emoji": "",
+    "category": "List",
+    "uuid": "2be481f448484355a4e37c0b649b0241"
+  },
+  {
+    "slug": "get-random-index-from-list",
+    "name": "_Get Random Index From List",
+    "emoji": "",
+    "category": "List",
+    "uuid": "d01c76be6e86417e82b89c3558b00521"
+  },
+  {
+    "slug": "get-random-item-from-list",
+    "name": "_Get Random Item From List",
+    "emoji": "",
+    "category": "List",
+    "uuid": "e08744f826274989be5357643e5493a3"
+  },
+  {
+    "slug": "isdictionary",
+    "name": "isDictionary",
+    "emoji": "",
+    "category": "Dictionary",
+    "uuid": "c2fe8e69d5164447a451d00fa4e93b85"
+  },
+  {
+    "slug": "merge-dictionaries",
+    "name": "Merge Dictionaries",
+    "emoji": "",
+    "category": "Dictionary",
+    "uuid": "a40d21c4a19a45d1816cb3b92fae10c5"
+  },
+  {
+    "slug": "pretty-print-dictionary",
+    "name": "Pretty Print Dictionary",
+    "emoji": "",
+    "category": "Dictionary",
+    "uuid": "cfbd32eed2e949e3a528ed847babc47e"
+  },
+  {
+    "slug": "get-todays-hourly-weather-forecast",
+    "name": "Get Today's Hourly Weather Forecast",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "76010b964a734c2db40f78df9571f540"
+  },
+  {
+    "slug": "get-todays-hourly-weather-data",
+    "name": "Get Today's Hourly Weather Data",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "2da3feade23444129a8706cc665696b9"
+  },
+  {
+    "slug": "get-daily-weather-forecast",
+    "name": "Get Daily Weather Forecast",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "497baca956be4b318b5004c4b3deda62"
+  },
+  {
+    "slug": "get-daily-overall-pop",
+    "name": "Get Daily Overall PoP",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "d0e81dc0e6ed4832807922d309f8e6c9"
+  },
+  {
+    "slug": "show-brief-weather-summary",
+    "name": "Show Brief Weather Summary",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "73520cdf67d74cf5aa75352a433cfec3",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "speak-weather-forecast",
+    "name": "Speak Weather Forecast",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "d18cde09048c4a21bf27cc5fa40660b3"
+  },
+  {
+    "slug": "issunup",
+    "name": "isSunUp",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "4efbabe4ba524cfda6cde0ba6522a5fc"
+  },
+  {
+    "slug": "get-max-hourly-weather-data",
+    "name": "_Get Max Hourly Weather Data",
+    "emoji": "",
+    "category": "Weather",
+    "uuid": "67268122abfa428b9a01be4363598d32",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "go-to-screen-time-summary",
+    "name": "Go to Screen Time Summary",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "c93727b7a1264a2b925582d0229c7ff7"
+  },
+  {
+    "slug": "go-to-bluetooth-setting",
+    "name": "Go to Bluetooth Setting",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "0a107a71359d470885f672f056955805"
+  },
+  {
+    "slug": "go-to-current-app-settings",
+    "name": "Go to Current App Settings",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "95a1f21c002e467d81e681a9c8dba4a6"
+  },
+  {
+    "slug": "go-to-wifi-setting",
+    "name": "Go to WiFi Setting",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "4b324b4cc1944f1ab8b16331423b52a5"
+  },
+  {
+    "slug": "join-wifi",
+    "name": "Join WiFi",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "500809c8e4134cb2b10a8a25baf987c2"
+  },
+  {
+    "slug": "connect-to-internet",
+    "name": "Connect to Internet",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "db11c9e290a04056a127558beb9df36f",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "disconnect-from-internet",
+    "name": "Disconnect from Internet",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "dab54cd79d74479295397ad0787d52bb"
+  },
+  {
+    "slug": "ultra-low-power-saver",
+    "name": "Ultra Low Power Saver",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "5ba7c5b8a5ce4b2692ed3cadc9a4a018"
+  },
+  {
+    "slug": "recover-from-ultra-low-power-saver",
+    "name": "Recover from Ultra Low Power Saver",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "a6d33803d86346f39633f5ac365de5ba"
+  },
+  {
+    "slug": "turn-on-color-filters",
+    "name": "Turn on Color Filters",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "913f585c7cb2412f8dfa6795ffcc2ada"
+  },
+  {
+    "slug": "turn-off-color-filters",
+    "name": "Turn off Color Filters",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "6b1531757327403684a6ab6bde090824"
+  },
+  {
+    "slug": "battery-charging-reminder",
+    "name": "Battery Charging Reminder",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "20c990a099f24776ae7dc0152e60055c"
+  },
+  {
+    "slug": "smart-data-saver",
+    "name": "Smart Data Saver",
+    "emoji": "",
+    "category": "iPhone Settings",
+    "uuid": "cda84f2088b24a13aadc9890932e8ad9"
+  },
+  {
+    "slug": "set-zero-brightness",
+    "name": "Set Zero Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "0ee88fb7683e46ec8ce61f5a2f0d75ac"
+  },
+  {
+    "slug": "set-ultra-low-brightness",
+    "name": "Set Ultra Low Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "13386eaa78964c1fb99fd0ea3f5ab38d"
+  },
+  {
+    "slug": "set-low-brightness",
+    "name": "Set Low Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "a3011936407d43738fa182366b5449c5"
+  },
+  {
+    "slug": "set-average-brightness",
+    "name": "Set Average Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "d495462b877f41bdbdb0d115bddb5d8c"
+  },
+  {
+    "slug": "set-medium-brightness",
+    "name": "Set Medium Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "bdb81d6278a04beda7fb8b0a78f6743a"
+  },
+  {
+    "slug": "set-high-brightness",
+    "name": "Set High Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "58c2b67d02014c6fa93a6e9885d5ad61"
+  },
+  {
+    "slug": "set-maximum-brightness",
+    "name": "Set Maximum Brightness",
+    "emoji": "",
+    "category": "Set Device Brightness",
+    "uuid": "f6760606a5c74b67b95efd0ee33aef1c"
+  },
+  {
+    "slug": "play-background-sound",
+    "name": "Play Background Sound",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "093d07c10fac4156b6193f89bb50d5e8"
+  },
+  {
+    "slug": "audio-timer",
+    "name": "_Audio Timer",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "867bc8283a554b6d82322305ad0ea56c"
+  },
+  {
+    "slug": "play-audio-files",
+    "name": "_Play Audio File(s)",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "efd81c5a595446478b7fdbe76ed3f28c"
+  },
+  {
+    "slug": "makettsspokenaudio",
+    "name": "_MakeTTSSpokenAudio",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "c423c70d2dd148be81a612797dc44283"
+  },
+  {
+    "slug": "text2speech",
+    "name": "_Text2Speech",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "59644c82e5ea44f7865dda6ca40f8b6c"
+  },
+  {
+    "slug": "format-positional-duration-to-seconds",
+    "name": "Format Positional Duration To Seconds",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "271bf8ddc229420cae70f87967cc352e"
+  },
+  {
+    "slug": "convert-sound-file-to-base64",
+    "name": "Convert Sound File to Base64",
+    "emoji": "",
+    "category": "Audio",
+    "uuid": "8d32f22a226743648932fae327010057"
+  },
+  {
+    "slug": "nsdr-10mins",
+    "name": "NSDR-10mins",
+    "emoji": "💤",
+    "category": "Sound Files",
+    "uuid": "2c04052e510a4b9183143158ad46bf22"
+  },
+  {
+    "slug": "nsdr-20mins",
+    "name": "NSDR-20mins",
+    "emoji": "💤",
+    "category": "Sound Files",
+    "uuid": "0e3cb3ee6a064154bfbcb82fa815934d"
+  },
+  {
+    "slug": "5-min-breathwork",
+    "name": "5-Min Breathwork",
+    "emoji": "🫁",
+    "category": "Sound Files",
+    "uuid": "233d93a68e6b4d478b361583c420f9d3"
+  },
+  {
+    "slug": "30-min-40-hz-binaural-beats",
+    "name": "30-Min 40-Hz Binaural Beats",
+    "emoji": "⏈",
+    "category": "Sound Files",
+    "uuid": "5b481a11e7664c3b946ad10f1675f6b2"
+  },
+  {
+    "slug": "vocal-countdown-timer",
+    "name": "Vocal Countdown Timer",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "78d54005113b44c3ad0e7e12d24b18b7"
+  },
+  {
+    "slug": "iphone-alarm-ringtone",
+    "name": "iPhone Alarm Ringtone",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "78c0bdabc2404884bd8d443a07fdf66d"
+  },
+  {
+    "slug": "iphone-lock-sound-effect",
+    "name": "iPhone Lock Sound Effect",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "00fb58aaa6024f31abad787da76ff02b"
+  },
+  {
+    "slug": "success-sound-effect",
+    "name": "Success Sound Effect",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "fdd7cf35482e460da5cd710d4968faa7"
+  },
+  {
+    "slug": "alert-sound-effect",
+    "name": "Alert Sound Effect",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "da539771f8574fc79d42a0ededf7f00c"
+  },
+  {
+    "slug": "times-up",
+    "name": "Time's Up!",
+    "emoji": "",
+    "category": "Sound Files",
+    "uuid": "43fc6d7bcb1045abaaf21bafceb26bcb"
+  },
+  {
+    "slug": "dear-today-me",
+    "name": "Dear Today Me",
+    "emoji": "🧭",
+    "category": "Motivate Me",
+    "uuid": "15526ffb4efa4271b27a294b99664d89"
+  },
+  {
+    "slug": "the-mamba-mentality",
+    "name": "The Mamba Mentality",
+    "emoji": "🦓",
+    "category": "Motivate Me",
+    "uuid": "6fa64552804f4f3d8b272f3c313df648"
+  },
+  {
+    "slug": "the-man-in-the-arena",
+    "name": "The Man in the Arena",
+    "emoji": "🏟️",
+    "category": "Motivate Me",
+    "uuid": "0b0d40ec68954c12baa8b7285ef13fb4"
+  },
+  {
+    "slug": "at-dawn",
+    "name": "At Dawn",
+    "emoji": "🌄",
+    "category": "Motivate Me",
+    "uuid": "ddf0532270684da0b3d1ec3a27f5e0be"
+  },
+  {
+    "slug": "our-deepest-fear",
+    "name": "Our Deepest Fear",
+    "emoji": "✨",
+    "category": "Motivate Me",
+    "uuid": "1de2996151764830984a58b800514c40"
+  },
+  {
+    "slug": "soundcore",
+    "name": "Soundcore",
+    "emoji": "🎧",
+    "category": "BLE Audio Devices",
+    "uuid": "de474870bae04f5fa4e8e3eb96862e8d"
+  },
+  {
+    "slug": "dtaudio",
+    "name": "DTAudio",
+    "emoji": "🎧",
+    "category": "BLE Audio Devices",
+    "uuid": "d11b60754acc41d98ca0921fb8f1d75c"
+  },
+  {
+    "slug": "snipd",
+    "name": "Snipd",
+    "emoji": "🎙️",
+    "category": "Podcasts",
+    "uuid": "8ca0f8ceb8554d65b16f95ad31ae1f63"
+  },
+  {
+    "slug": "podcasts",
+    "name": "Podcasts",
+    "emoji": "🎙️",
+    "category": "Podcasts",
+    "uuid": "9831306f0493464bb7f170fe7c881760",
+    "requiredApps": [
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "import-data-jar",
+    "name": "Import Data Jar",
+    "emoji": "",
+    "category": "Data Jar",
+    "uuid": "1c6bbd527c184b6b8ba895760e1f74a2",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "export-data-jar",
+    "name": "Export Data Jar",
+    "emoji": "",
+    "category": "Data Jar",
+    "uuid": "a8365f926b354d4f994e2b39ba3f6d39",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "data-jar-view-value-at-key-path",
+    "name": "Data Jar - View Value at Key Path",
+    "emoji": "",
+    "category": "Data Jar",
+    "uuid": "a92315de500d4c35b9d8f96a5370a471",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "go-to-obsidian-homepage",
+    "name": "Go to Obsidian Homepage",
+    "emoji": "🏡",
+    "category": "Obsidian",
+    "uuid": "72865d879f964164a6dfdc4ae377336d"
+  },
+  {
+    "slug": "maintain-obsidian-vault",
+    "name": "Maintain Obsidian Vault",
+    "emoji": "💉",
+    "category": "Obsidian",
+    "uuid": "2c361fbdfd374731a34c6785c54061a0"
+  },
+  {
+    "slug": "obsidian-search-vault",
+    "name": "Obsidian - Search Vault",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "3cc0d93c2f7a4fcfad8d47f256794aca",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "obsidian-open-notes",
+    "name": "Obsidian - Open Note(s)",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "4ae8e46af0564dd281dc06dc769d4baa",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      },
+      {
+        "name": "Actions",
+        "url": "https://sindresorhus.com/actions"
+      }
+    ]
+  },
+  {
+    "slug": "obsidian-force-refresh-dataview-views",
+    "name": "Obsidian - Force Refresh Dataview Views",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "b206ea611cb141599272730ede2ffeee"
+  },
+  {
+    "slug": "obsidian-close-all-tabs",
+    "name": "Obsidian - Close All Tabs",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "29868d764cd34c15982709a5a7a731d2"
+  },
+  {
+    "slug": "obsidian-close-specific-tabs-by-filepath",
+    "name": "Obsidian - Close Specific Tab(s) By Filepath",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "8f107aa30e0e421b878db7b8cfd80730"
+  },
+  {
+    "slug": "obsidian-toggle-left-sidebar",
+    "name": "Obsidian - Toggle Left Sidebar",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "f60a5dd317d547c29d4207dd157a5e69"
+  },
+  {
+    "slug": "obsidian-toggle-right-sidebar",
+    "name": "Obsidian - Toggle Right Sidebar",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "e3a58921a31a46e792d08abfea287e89"
+  },
+  {
+    "slug": "obsidian-set-unique-attachments-names",
+    "name": "Obsidian - Set Unique Attachments Names",
+    "emoji": "",
+    "category": "Obsidian",
+    "uuid": "8a29d70d121147f5b5c4c6b3559add5e"
+  },
+  {
+    "slug": "vs-code-open-notes",
+    "name": "VS Code - Open Note(s)",
+    "emoji": "",
+    "category": "VS Code",
+    "uuid": "7d69b20e22384e6b8e47be545663d6f0"
+  },
+  {
+    "slug": "get-title-of-apple-notes",
+    "name": "Get Title of Apple Notes",
+    "emoji": "",
+    "category": "Apple Notes",
+    "uuid": "1621ec647ae049c5bfaf75aaf3530199"
+  },
+  {
+    "slug": "get-body-of-apple-notes-plain-text",
+    "name": "Get Body of Apple Notes (Plain Text)",
+    "emoji": "",
+    "category": "Apple Notes",
+    "uuid": "3aa0fee4b6a6406c823884ca25196d5e"
+  },
+  {
+    "slug": "get-body-of-apple-notes-rich-text",
+    "name": "Get Body of Apple Notes (Rich Text)",
+    "emoji": "",
+    "category": "Apple Notes",
+    "uuid": "1e9168accd9f474fac9dbc83861cefa9"
+  },
+  {
+    "slug": "smart-calendar-event-scheduler",
+    "name": "Smart Calendar Event Scheduler",
+    "emoji": "📅",
+    "category": "Apple Calendar",
+    "uuid": "c29e90c8ab2f42dabbdc8ca7cef132b4"
+  },
+  {
+    "slug": "open-calendar-on-specific-date",
+    "name": "Open Calendar on Specific Date",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "0c5e347d339b40b2ba90cdaa41c26e9c"
+  },
+  {
+    "slug": "speak-scheduled-calendar-events",
+    "name": "Speak Scheduled Calendar Events",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "3da7fed8357348d5a0144e2d12bf8c1e"
+  },
+  {
+    "slug": "get-calendar-events",
+    "name": "_Get Calendar Events",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "fb39a1bf2c6f482e9f021a0c2e780f18",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "get-diary-entries-for-scheduled-calendar-events",
+    "name": "Get Diary Entries for Scheduled Calendar Events",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "69fa069b241e48ae99c56a923eb48e63"
+  },
+  {
+    "slug": "get-diary-entries-for-all-day-calendar-events",
+    "name": "Get Diary Entries for All-Day Calendar Events",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "87ada16478a84ac4ac955cd506170381"
+  },
+  {
+    "slug": "log-diary-entries-for-scheduled-calendar-events",
+    "name": "Log Diary Entries for Scheduled Calendar Events",
+    "emoji": "",
+    "category": "Apple Calendar",
+    "uuid": "2f8de71e74f540e4a819557aa18a3cd4",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "recover-from-reminders-backup",
+    "name": "Recover from Reminders Backup",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "b8ce8b0adb91472396c64078d4114c47"
+  },
+  {
+    "slug": "batch-add-reminders",
+    "name": "Batch Add Reminders",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "ec9340436b204387a200a9b945ccd392",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "search-reminders",
+    "name": "Search Reminders",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "a653364701724b5d8208e21646643f24",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      },
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "show-reminders-list",
+    "name": "_Show Reminders List",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "d7839986c928429580a2b4cb8e684b6f",
+    "requiredApps": [
+      {
+        "name": "Text Case",
+        "url": "https://textcase.app"
+      },
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "reminder2markdown",
+    "name": "_Reminder2Markdown",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "12c790b00b7d4be9b74e12a395256838"
+  },
+  {
+    "slug": "reminder2markdown-kernel",
+    "name": "_Reminder2Markdown - Kernel",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "07de13afeb524c59a961aab7d689d2e0"
+  },
+  {
+    "slug": "reminderlist2markdown",
+    "name": "_ReminderList2Markdown",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "5b727863db2447ef9d653d8ec5a64f73",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "reminderlist2json",
+    "name": "_ReminderList2JSON",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "28aefffafbc04a988046abca8a7ea5aa"
+  },
+  {
+    "slug": "filter-reminder-lists",
+    "name": "_Filter Reminder Lists",
+    "emoji": "",
+    "category": "Apple Reminders",
+    "uuid": "0be04967875a42138c7188d648410765",
+    "requiredApps": [
+      {
+        "name": "Toolbox Pro",
+        "url": "https://toolboxpro.app"
+      }
+    ]
+  },
+  {
+    "slug": "whatsapp-click-to-chat",
+    "name": "WhatsApp Click-to-Chat",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "48e3678a74374ca1a39300479568b066"
+  },
+  {
+    "slug": "color-picker",
+    "name": "Color Picker",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "4679d98c3f074ccabccadc48347b496d"
+  },
+  {
+    "slug": "whats-in-the-image",
+    "name": "What's In The Image",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "3a8455701d324755a5a6b2de38cef818",
+    "requiredApps": [
+      {
+        "name": "Data Jar",
+        "url": "https://datajar.app"
+      }
+    ]
+  },
+  {
+    "slug": "reverse-image-search",
+    "name": "Reverse Image Search",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "1e0e45c97194408782be2a31de59ec8a"
+  },
+  {
+    "slug": "search-app-store",
+    "name": "Search App Store",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "fd3e0c90911b42999eb215b1df1c9211"
+  },
+  {
+    "slug": "iphone-screenshots-framer",
+    "name": "iPhone Screenshots Framer",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "273684b005f442188b21dab4304a310b"
+  },
+  {
+    "slug": "make-pdf-from-html",
+    "name": "Make PDF from HTML",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "ea23016526a54bb4870610fda5e02f01"
+  },
+  {
+    "slug": "coin-flip",
+    "name": "Coin Flip",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "9dad3504f4ec4313a1d597ee22c4a461"
+  },
+  {
+    "slug": "get-directions",
+    "name": "Get Directions",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "bc5ed99367544007b08ff7b3bc3b0bd4"
+  },
+  {
+    "slug": "calculate-tip",
+    "name": "Calculate Tip",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "5b3575c1f4694667b2db41b8faf7d0d4"
+  },
+  {
+    "slug": "water-eject",
+    "name": "Water Eject",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "e6c50b56a77e4bdfa22d70c0c78d95a9"
+  },
+  {
+    "slug": "open-imessage-chat-window-for-contacts",
+    "name": "Open iMessage Chat Window for Contacts",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "b580394a32ea419d8cb1dc071f014c45"
+  },
+  {
+    "slug": "live-photo-to-gif",
+    "name": "Live Photo to GIF",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "d82d05818b9a4809b8727db9c60408d5"
+  },
+  {
+    "slug": "share-wi-fi",
+    "name": "Share Wi-Fi",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "d0370d85c80f47318fb48d5793ed9984"
+  },
+  {
+    "slug": "goodreads-book-quotes",
+    "name": "Goodreads Book Quotes",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "1ad248c103bc4a35a4802ae7c1d1feda"
+  },
+  {
+    "slug": "nasa-epic-gif",
+    "name": "NASA EPIC GIF",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "6b4d80e564504c1f94013cb92fc27239"
+  },
+  {
+    "slug": "daily-exercise",
+    "name": "Daily Exercise",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "957df2a106324e05bc063ac22c6fbc46"
+  },
+  {
+    "slug": "check-daily-screen-time",
+    "name": "Check Daily Screen Time",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "0963144f3dbb4db8a7db2aeac52e42c9",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "grocery-shopping",
+    "name": "Grocery Shopping",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "8e7e9540dba74629b5423e0f6b2af568"
+  },
+  {
+    "slug": "trainerday",
+    "name": "TrainerDay",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "1aeb39463623464099134b4878ec11c3"
+  },
+  {
+    "slug": "death-clock",
+    "name": "Death Clock",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "395582289d434221b1e47a5b999cdb15",
+    "requiredApps": [
+      {
+        "name": "Scriptable",
+        "url": "https://scriptable.app"
+      }
+    ]
+  },
+  {
+    "slug": "evergreen-lists",
+    "name": "Evergreen Lists",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "e6baefb291114800a2925b9a04cfb783"
+  },
+  {
+    "slug": "weekly-mindware-update",
+    "name": "Weekly Mindware Update",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "9f1a452602094afe9c3384d4ca5a6ede"
+  },
+  {
+    "slug": "your-pocket-life-coach",
+    "name": "Your Pocket Life Coach",
+    "emoji": "",
+    "category": "Shared",
+    "uuid": "c365a138a2834ccb9c8059764c29ab38"
+  }
+]

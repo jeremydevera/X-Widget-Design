@@ -1,52 +1,42 @@
+// DesignCatalog · the data side of the design list
+//
+// Each entry is tagged .live (we have a real iOS data source) or .pending
+// (needs WeatherKit / HealthKit / network plumbing the app doesn't ship yet).
+
 import Foundation
 
-/// All available designs. Order within category determines the display order.
 enum DesignCatalog {
     static let all: [Design] = [
-        // ─── DEVICE
-        .init(id: "fps-counter",   name: "framerate",         category: "DEVICE"),
-        .init(id: "cpu-temp",      name: "cpu + temp",        category: "DEVICE"),
-        .init(id: "download",      name: "download progress", category: "DEVICE"),
-        .init(id: "battery-watch", name: "battery watch",     category: "DEVICE"),
+        // ─ DEVICE · all live (Mach + UIDevice + URLResourceValues)
+        Design(id: "framerate",     name: "framerate",      category: .device,  status: .live),
+        Design(id: "cpu-thermal",   name: "cpu + thermal",  category: .device,  status: .live),
+        Design(id: "battery-watch", name: "battery watch",  category: .device,  status: .live),
+        Design(id: "memory-watch",  name: "memory usage",   category: .device,  status: .live),
+        Design(id: "storage-free",  name: "storage free",   category: .device,  status: .live),
 
-        // ─── MEDIA
-        .init(id: "now-playing",   name: "now playing",       category: "MEDIA"),
-        .init(id: "recording",     name: "recording",         category: "MEDIA"),
-        .init(id: "live-stream",   name: "live stream",       category: "MEDIA"),
+        // ─ WEATHER · pending (WeatherKit + entitlement)
+        Design(id: "weather-now",   name: "weather now",     category: .weather, status: .pending),
+        Design(id: "weather-clock", name: "weather + clock", category: .weather, status: .pending),
+        Design(id: "weather-uv",    name: "uv index",        category: .weather, status: .pending),
 
-        // ─── WEATHER
-        .init(id: "weather-now",   name: "weather now",       category: "WEATHER"),
-        .init(id: "weather-clock", name: "weather + clock",   category: "WEATHER"),
+        // ─ HEALTH · steps live (CMPedometer · no HealthKit needed), rest pending
+        Design(id: "heart-rate",    name: "heart rate",      category: .health,  status: .pending),
+        Design(id: "steps",         name: "step counter",    category: .health,  status: .live),
+        Design(id: "calories",      name: "active calories", category: .health,  status: .pending),
 
-        // ─── HEALTH
-        .init(id: "heart-rate",    name: "heart rate",        category: "HEALTH"),
-        .init(id: "steps",         name: "step counter",      category: "HEALTH"),
-        .init(id: "workout",       name: "workout timer",     category: "HEALTH"),
+        // ─ TIME · all live (Foundation Date + TimeZone)
+        Design(id: "big-clock",     name: "big clock",       category: .time,    status: .live),
+        Design(id: "world-clock",   name: "world clocks",    category: .time,    status: .live),
 
-        // ─── TIME
-        .init(id: "big-clock",     name: "big clock",         category: "TIME"),
+        // ─ CRYPTO · pending (public price APIs over URLSession)
+        Design(id: "btc-price",     name: "bitcoin price",   category: .crypto,  status: .pending),
+        Design(id: "eth-price",     name: "ethereum price",  category: .crypto,  status: .pending),
 
-        // ─── FUN
-        .init(id: "sample-gif",    name: "sample gif",        category: "FUN"),
-        .init(id: "minimal-pulse", name: "just a pulse",      category: "FUN"),
+        // ─ SPORTS · pending (ESPN public scoreboard over URLSession)
+        Design(id: "sport-live",    name: "live game",       category: .sports,  status: .pending)
     ]
 
     static func byId(_ id: String) -> Design? {
         all.first { $0.id == id }
-    }
-
-    static var categories: [(String, Int)] {
-        let counts = Dictionary(grouping: all, by: \.category).mapValues(\.count)
-        return DesignCategory.order.compactMap { c in
-            guard let n = counts[c] else { return nil }
-            return (c, n)
-        }
-    }
-
-    static func filtered(_ filter: FilterKey) -> [Design] {
-        switch filter {
-        case .all: return all
-        case .category(let c): return all.filter { $0.category == c }
-        }
     }
 }

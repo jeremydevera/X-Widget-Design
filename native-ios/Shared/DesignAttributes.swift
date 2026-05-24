@@ -1,9 +1,9 @@
+// DesignAttributes · ActivityKit payload shared between the main app
+// and the Widget extension.
+
 import ActivityKit
 import Foundation
 
-/// ActivityAttributes payload shared between the main app and the widget extension.
-/// `ContentState` carries the live-updating values (clock, weather temp, etc.).
-/// `attributes.designId` selects which design's view to render in the Live Activity.
 struct DesignAttributes: ActivityAttributes {
     public typealias DesignContentState = ContentState
 
@@ -15,23 +15,31 @@ struct DesignAttributes: ActivityAttributes {
         public var fps: Int
         public var temp: Double
         public var battery: Int
+        public var batteryRemaining: String
         public var memoryGB: Double
+        public var diskFreeGB: Double
+        public var diskTotalGB: Double
         public var heartRate: Int
         public var stepCount: Int
         public var workoutTimer: String
+        public var isLong: Bool
 
         public init(
             clockText: String = "9:41",
             weatherTemp: Int = 21,
             weatherGlyph: String = "sun.max.fill",
             cpu: Int = 42,
-            fps: Int = 58,
+            fps: Int = 60,
             temp: Double = 38.5,
             battery: Int = 87,
-            memoryGB: Double = 3.4,
+            batteryRemaining: String = "—",
+            memoryGB: Double = 1.8,
+            diskFreeGB: Double = 0,
+            diskTotalGB: Double = 0,
             heartRate: Int = 72,
             stepCount: Int = 8243,
-            workoutTimer: String = "23:14"
+            workoutTimer: String = "23:14",
+            isLong: Bool = false
         ) {
             self.clockText = clockText
             self.weatherTemp = weatherTemp
@@ -40,13 +48,16 @@ struct DesignAttributes: ActivityAttributes {
             self.fps = fps
             self.temp = temp
             self.battery = battery
+            self.batteryRemaining = batteryRemaining
             self.memoryGB = memoryGB
+            self.diskFreeGB = diskFreeGB
+            self.diskTotalGB = diskTotalGB
             self.heartRate = heartRate
             self.stepCount = stepCount
             self.workoutTimer = workoutTimer
+            self.isLong = isLong
         }
     }
 
-    /// Identifier of the design to render. Matches Design.id in the catalog.
     public var designId: String
 }

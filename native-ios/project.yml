@@ -1,6 +1,4 @@
-# XcodeGen project spec
-# Generate the .xcodeproj with:  xcodegen generate
-
+# XcodeGen project spec — generate with: xcodegen generate
 name: Islet
 options:
   bundleIdPrefix: com.example.islet
@@ -11,8 +9,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    DEVELOPMENT_TEAM: ""           # set your Apple Developer Team ID
-    MARKETING_VERSION: "0.2.0"
+    DEVELOPMENT_TEAM: "ANKC3V97S3"
+    MARKETING_VERSION: "0.3.0"
     CURRENT_PROJECT_VERSION: "1"
     IPHONEOS_DEPLOYMENT_TARGET: "17.0"
     TARGETED_DEVICE_FAMILY: "1"
@@ -25,7 +23,6 @@ targets:
     sources:
       - App
       - Shared
-    resources: []
     info:
       path: App/Info.plist
       properties:
@@ -34,10 +31,33 @@ targets:
         UIApplicationSupportsIndirectInputEvents: true
         UISupportsLiveActivities: true
         UISupportsLiveActivitiesFrequentUpdates: true
-        UIRequiredDeviceCapabilities: [armv7]
         UIRequiresFullScreen: false
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
         NSSupportsLiveActivities: true
+        # Privacy usage descriptions (required by iOS for runtime prompts)
+        NSMotionUsageDescription: "Track steps, altitude and motion for live widgets and skills."
+        NSHealthShareUsageDescription: "Read steps, calories, sleep and heart rate to power Health widgets."
+        NSLocationWhenInUseUsageDescription: "Used to fetch local weather and detect arrivals."
+        NSCameraUsageDescription: "Optional · used by accessory widgets that scan codes."
+        NSBluetoothAlwaysUsageDescription: "Detect car or accessory connections to trigger skills."
+        NSAppleEventsUsageDescription: "Open Shortcuts to suggest Focus modes."
+        # URL schemes we probe with canOpenURL · used to detect whether each
+        # third-party app a shortcut depends on (Data Jar, Toolbox Pro, etc.)
+        # is already installed on the device.
+        LSApplicationQueriesSchemes:
+          - shortcuts
+          - data-jar
+          - toolbox-pro
+          - actions
+          - scriptable
+          - textcase
+          - pushcut
+          - charty
+          - ashell
+          - any-text
+          - caffeinated
+          - chatgpt
+          - microsoft-edge
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.example.islet

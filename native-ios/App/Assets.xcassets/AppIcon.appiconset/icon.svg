@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <!-- The dynamic island silhouette as the focal logo mark -->
+  <rect x="232" y="448" width="560" height="128" rx="64" fill="url(#pillGrad)"/>
+  <!-- The "lens" dot inside the island, off-center right (matches real iPhone Pro) -->
+  <circle cx="720" cy="512" r="22" fill="#0a0a0a"/>
+  <!-- A subtle accent line under the pill -->
+  <rect x="392" y="640" width="240" height="6" fill="#3a3a3a" rx="3"/>
+</svg>

@@ -22,45 +22,303 @@
       <!-- Tab content area -->
       <section class="screen-body">
 
+        <!-- ━━━ TAB · DASHBOARD ━━━ -->
+        <div class="tab-panel is-active" data-tab="dashboard">
+          <div class="tab-header">
+            <div class="th-title">
+              <span class="th-name">device dashboard</span>
+              <span class="th-sub" id="dash-device">— · iOS —</span>
+            </div>
+            <span class="state-tag is-active">LIVE</span>
+          </div>
+          <div class="dash-wrap">
+
+            <!-- Health score hero -->
+            <div class="health-hero">
+              <div class="hh-ring">
+                <svg viewBox="0 0 120 120" width="120" height="120">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#222" stroke-width="6"/>
+                  <circle id="hh-arc" cx="60" cy="60" r="52" fill="none"
+                          stroke="currentColor" stroke-width="6"
+                          stroke-linecap="round"
+                          stroke-dasharray="326.7" stroke-dashoffset="100"
+                          transform="rotate(-90 60 60)" />
+                </svg>
+                <div class="hh-num">
+                  <span class="hh-val" id="hh-score">—</span>
+                  <span class="hh-lbl">HEALTH</span>
+                </div>
+              </div>
+              <div class="hh-meta">
+                <div class="hh-status" id="hh-status">CHECKING</div>
+                <div class="hh-summary" id="hh-summary">scanning device…</div>
+                <div class="hh-factors" id="hh-factors"></div>
+              </div>
+            </div>
+
+            <!-- Alerts strip -->
+            <div class="dash-alerts" id="dash-alerts"></div>
+
+            <!-- Today panel -->
+            <div class="dash-section-title">— TODAY</div>
+            <div class="today-grid">
+              <div class="today-tile" data-key="uptime">
+                <div class="tt-lbl">UPTIME</div>
+                <div class="tt-val" id="today-uptime">—</div>
+                <div class="tt-sub">since reboot</div>
+              </div>
+              <div class="today-tile" data-key="steps">
+                <div class="tt-lbl">STEPS</div>
+                <div class="tt-val" id="today-steps">—</div>
+                <div class="tt-sub" id="today-steps-sub">— km</div>
+              </div>
+              <div class="today-tile" data-key="cpu-peak">
+                <div class="tt-lbl">CPU PEAK</div>
+                <div class="tt-val" id="today-cpu">—<span class="tt-unit">%</span></div>
+                <div class="tt-sub">last hour</div>
+              </div>
+              <div class="today-tile" data-key="thermal-peak">
+                <div class="tt-lbl">THERMAL PEAK</div>
+                <div class="tt-val pc-val-sm" id="today-thermal">—</div>
+                <div class="tt-sub">today</div>
+              </div>
+              <div class="today-tile" data-key="network">
+                <div class="tt-lbl">NETWORK</div>
+                <div class="tt-val pc-val-sm" id="today-network">—</div>
+                <div class="tt-sub" id="today-cell">—</div>
+              </div>
+              <div class="today-tile" data-key="memory">
+                <div class="tt-lbl">MEMORY</div>
+                <div class="tt-val" id="today-mem">—<span class="tt-unit">GB</span></div>
+                <div class="tt-sub">app footprint</div>
+              </div>
+            </div>
+
+            <!-- Storage · totals only (per-category breakdown isn't exposed by iOS) -->
+            <div class="dash-section-title">— STORAGE</div>
+            <div class="storage-card">
+              <div class="storage-head">
+                <span class="sh-used"><span id="sto-used">—</span> GB used</span>
+                <span class="sh-free"><span id="sto-free">—</span> GB free</span>
+              </div>
+              <div class="storage-bar"><span id="sto-fill" style="background:#fafafa;"></span></div>
+              <div class="storage-note">total / available · per-category breakdown isn't exposed by iOS</div>
+            </div>
+
+            <!-- Battery · live snapshot only (iOS doesn't expose historical curve) -->
+            <div class="dash-section-title">— BATTERY</div>
+            <div class="batt-card">
+              <div class="batt-head">
+                <div class="batt-now">
+                  <span class="bn-lbl" id="batt-state">UNPLUGGED</span>
+                  <span class="bn-val" id="batt-pct">—%</span>
+                </div>
+                <div class="batt-stats">
+                  <div><span class="bs-lbl">DRAIN/HR</span><span class="bs-val" id="batt-drain">—%/h</span></div>
+                  <div><span class="bs-lbl">REMAINING</span><span class="bs-val" id="batt-eta">—h —m</span></div>
+                </div>
+              </div>
+              <div class="batt-bar"><span id="batt-fill"></span></div>
+              <div class="batt-note">live level via UIDevice · iOS doesn't expose a 24h history to third-party apps</div>
+            </div>
+
+            <!-- Trends · 7 days (recorded by this app) -->
+            <div class="dash-section-title">— TRENDS · 7 DAYS</div>
+            <div class="trends-note">based on samples taken while this app is active · Memory Peak &amp; Launch Time come from MetricKit</div>
+            <div class="trends-grid">
+              <div class="trend-card" data-key="cpu">
+                <div class="tr-head"><span>CPU PEAK <span class="tr-tag">RECORDED</span></span><span class="r" id="tr-cpu-now">—%</span></div>
+                <svg class="trend-svg" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline id="tr-cpu" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div class="trend-card" data-key="mem">
+                <div class="tr-head"><span>MEMORY PEAK <span class="tr-tag">METRICKIT</span></span><span class="r" id="tr-mem-now">—MB</span></div>
+                <svg class="trend-svg" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline id="tr-mem" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div class="trend-card" data-key="storage">
+                <div class="tr-head"><span>STORAGE FREE <span class="tr-tag">RECORDED</span></span><span class="r" id="tr-sto-now">—GB</span></div>
+                <svg class="trend-svg" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline id="tr-sto" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+              <div class="trend-card" data-key="launch">
+                <div class="tr-head"><span>LAUNCH TIME <span class="tr-tag">METRICKIT</span></span><span class="r" id="tr-lt-now">—ms</span></div>
+                <svg class="trend-svg" viewBox="0 0 100 30" preserveAspectRatio="none"><polyline id="tr-lt" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+              </div>
+            </div>
+
+            <!-- Quick actions removed · use the bottom tab bar -->
+
+          </div>
+        </div>
+
+        <!-- ━━━ TAB · SKILLS ━━━ -->
+        <div class="tab-panel" data-tab="skills">
+          <div class="tab-header">
+            <div class="th-title">
+              <span class="th-name">skills</span>
+              <span class="th-sub">automations · <span id="skills-on-count">0</span> enabled</span>
+            </div>
+            <button class="ghost-btn" id="skills-disable-all">DISABLE ALL</button>
+          </div>
+          <div class="skills-wrap">
+
+            <div class="skills-intro">
+              when something happens on your phone, do something else. tap a skill to configure and enable it.
+            </div>
+
+            <div class="skills-cat-row" id="skills-cat-row"></div>
+
+            <div id="skills-list" class="skills-list"></div>
+
+          </div>
+
+          <!-- ─── Skill detail screen (slides in when a row is tapped) ─── -->
+          <div class="detail-screen" id="skill-detail" aria-hidden="true">
+            <div class="detail-header">
+              <button class="back-btn" id="skill-detail-back" aria-label="back">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3l-5 5 5 5"/></svg>
+                <span>BACK</span>
+              </button>
+              <div class="dh-title">
+                <span class="dh-name" id="skill-detail-name">—</span>
+                <span class="dh-cat" id="skill-detail-cat">—</span>
+              </div>
+            </div>
+
+            <div class="detail-body">
+
+              <!-- Big enable toggle card -->
+              <div class="skill-enable-card">
+                <div class="set-row-meta">
+                  <div class="set-name" id="skill-enable-name">Enable skill</div>
+                  <div class="set-desc" id="skill-enable-status">currently disabled</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="skill-enable-input"><span></span></label>
+              </div>
+
+              <!-- Live rule preview -->
+              <div class="skill-rule-preview" id="skill-rule-preview">
+                <span class="rule-line"><span class="when">when</span><span id="skill-rule-when">—</span></span>
+                <span class="rule-line"><span class="then">then</span><span id="skill-rule-then">—</span></span>
+              </div>
+
+              <!-- Editable trigger params -->
+              <div class="edit-section">
+                <div class="edit-section-title">— TRIGGER SETTINGS</div>
+                <div id="skill-params"></div>
+              </div>
+
+              <div class="edit-section">
+                <div class="set-row" style="border:0;padding:8px 0;">
+                  <div class="set-row-meta">
+                    <div class="set-name">Reset to defaults</div>
+                    <div class="set-desc">discard custom values</div>
+                  </div>
+                  <button class="ghost-btn" id="skill-reset">RESET</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         <!-- ━━━ TAB · ISLAND ━━━ -->
-        <div class="tab-panel is-active" data-tab="island">
+        <div class="tab-panel" data-tab="island">
 
-          <!-- Sticky preview area -->
-          <div class="preview-area">
-            <div class="preview-head">
-              <div class="ph-left">
-                <span class="ph-k" id="preview-name">—</span>
-                <span class="ph-cat" id="preview-cat">—</span>
-              </div>
-              <span class="ph-meta">
-                <span id="active-state" class="state-tag">PREVIEWING</span>
-              </span>
+          <!-- Top filter bar · header + category chips + search -->
+          <div class="tab-header">
+            <div class="th-title">
+              <span class="th-name">dynamic island studio</span>
+              <span class="th-sub"><span id="list-count">17</span> designs · tap to edit</span>
             </div>
-
-            <div class="preview-frame">
-              <div class="preview-screen">
-                <div id="preview-island" class="preview-island"></div>
-              </div>
+          </div>
+          <div class="island-topbar">
+            <div class="chip-row">
+              <button class="chip chip-icon" id="search-toggle" aria-label="search" title="search">
+                <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14" y2="14"/></svg>
+              </button>
+              <div class="filter-chips" id="filter-chips"></div>
             </div>
-
-            <div class="action-bar">
-              <div class="size-toggle" id="size-toggle">
-                <button class="on" data-size="short">SHORT</button>
-                <button data-size="long">LONG</button>
-              </div>
-              <button class="apply-btn" id="apply-btn">apply</button>
+            <div class="search-bar" id="search-bar" hidden>
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14" y2="14"/></svg>
+              <input id="search-input" type="text" placeholder="search designs…" autocomplete="off" spellcheck="false">
+              <button class="search-clear" id="search-clear" aria-label="clear">×</button>
             </div>
           </div>
 
-          <!-- Scrollable design list -->
+          <!-- Scrollable design list (no preview, no apply · tap row to open detail) -->
           <div class="list-wrap">
-            <div class="list-head">
-              <span>ALL DESIGNS</span>
-              <span class="r"><span id="list-count">12</span> · scroll to preview</span>
-            </div>
-            <div class="filter-chips" id="filter-chips"></div>
             <div id="design-list" class="design-list">
               <div class="list-spacer-bottom"></div>
+            </div>
+          </div>
+
+          <!-- ─── Detail screen (slides in when a row is tapped) ─── -->
+          <div class="detail-screen" id="detail-screen" aria-hidden="true">
+            <div class="detail-header">
+              <button class="back-btn" id="detail-back" aria-label="back">
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3l-5 5 5 5"/></svg>
+                <span>BACK</span>
+              </button>
+              <div class="dh-title">
+                <span class="dh-name" id="detail-name">—</span>
+                <span class="dh-cat" id="detail-cat">—</span>
+              </div>
+            </div>
+
+            <div class="detail-body">
+
+              <!-- Preview -->
+              <div class="preview-frame">
+                <div class="preview-screen">
+                  <div id="preview-island" class="preview-island"></div>
+                </div>
+              </div>
+
+              <!-- Size toggle + apply -->
+              <div class="action-bar">
+                <div class="size-toggle" id="size-toggle">
+                  <button class="on" data-size="short">SHORT</button>
+                  <button data-size="long">LONG</button>
+                </div>
+                <button class="apply-btn" id="apply-btn">apply</button>
+              </div>
+
+              <!-- Edit options -->
+              <div class="edit-section" id="edit-refresh-section" hidden>
+                <div class="edit-section-title">— REFRESH RATE</div>
+                <div class="edit-section-help" id="edit-refresh-help">how often to fetch new data</div>
+                <div class="seg" id="edit-refresh">
+                  <button data-rate="1000">1s</button>
+                  <button data-rate="5000">5s</button>
+                  <button data-rate="15000">15s</button>
+                  <button data-rate="60000">1m</button>
+                  <button data-rate="300000">5m</button>
+                </div>
+              </div>
+
+              <div class="edit-section">
+                <div class="edit-section-title">— ACCENT COLOR</div>
+                <div class="edit-section-help">applies to highlighted values</div>
+                <div class="color-row" id="edit-color"></div>
+              </div>
+
+              <div class="edit-section">
+                <div class="edit-section-title">— EXTRAS</div>
+                <div class="set-row" style="border:0;padding:8px 0;">
+                  <div class="set-row-meta">
+                    <div class="set-name">Bold values</div>
+                    <div class="set-desc">heavier numerical weight</div>
+                  </div>
+                  <label class="toggle"><input type="checkbox" id="edit-bold" checked><span></span></label>
+                </div>
+                <div class="set-row" style="border:0;padding:8px 0;">
+                  <div class="set-row-meta">
+                    <div class="set-name">Reset to defaults</div>
+                    <div class="set-desc">discard customizations</div>
+                  </div>
+                  <button class="ghost-btn" id="edit-reset">RESET</button>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -68,65 +326,105 @@
 
         <!-- ━━━ TAB · PERFORMANCE ━━━ -->
         <div class="tab-panel" data-tab="performance">
+          <div class="tab-header">
+            <div class="th-title">
+              <span class="th-name">live performance</span>
+              <span class="th-sub">iOS metrics · mach + metrickit</span>
+            </div>
+          </div>
           <div class="perf-wrap">
 
-            <div class="perf-head">
-              <div class="ph-left">
-                <span class="ph-k">live performance</span>
-                <span class="ph-cat">IOS METRICS · MACH + METRICKIT</span>
+            <!-- ─── COMPUTE (this app's process) ─── -->
+            <div class="perf-section-title with-toggle">
+              <span>— COMPUTE · YOUR APP</span>
+              <div class="seg perf-view-toggle" id="perf-view">
+                <button class="on" data-view="chart">CHART</button>
+                <button data-view="list">LIST</button>
               </div>
-              <span class="state-tag is-active">LIVE</span>
             </div>
-
-            <!-- ─── COMPUTE ─── -->
-            <div class="perf-section-title">— COMPUTE</div>
             <div class="perf-grid">
 
-              <div class="perf-card" data-metric="cpu">
+              <div class="perf-card has-ring" data-metric="cpu">
                 <div class="pc-head"><span class="pc-lbl">CPU</span><span class="pc-unit">%</span></div>
-                <div class="pc-val" id="perf-cpu">—</div>
-                <div class="pc-bar"><span></span></div>
-                <div class="pc-src">host_processor_info</div>
-              </div>
-
-              <div class="perf-card" data-metric="memory">
-                <div class="pc-head"><span class="pc-lbl">MEMORY</span><span class="pc-unit">GB</span></div>
-                <div class="pc-val" id="perf-mem">—</div>
-                <div class="pc-bar"><span></span></div>
-                <div class="pc-src" id="perf-mem-src">— / 6.0 GB</div>
-              </div>
-
-              <div class="perf-card" data-metric="thermal">
-                <div class="pc-head"><span class="pc-lbl">THERMAL</span><span class="pc-unit">STATE</span></div>
-                <div class="pc-val pc-val-sm" id="perf-thermal">—</div>
-                <div class="thermal-track">
-                  <span class="ts" data-state="nominal"></span>
-                  <span class="ts" data-state="fair"></span>
-                  <span class="ts" data-state="serious"></span>
-                  <span class="ts" data-state="critical"></span>
+                <div class="pc-ring">
+                  <svg viewBox="0 0 88 88" width="88" height="88">
+                    <circle cx="44" cy="44" r="36" fill="none" stroke="#1d1d1d" stroke-width="6"/>
+                    <circle class="pc-ring-arc" cx="44" cy="44" r="36" fill="none" stroke="currentColor" stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="226.19" stroke-dashoffset="226.19"
+                            transform="rotate(-90 44 44)"/>
+                  </svg>
+                  <div class="pc-ring-val" id="perf-cpu">—</div>
                 </div>
-                <div class="pc-src">ProcessInfo</div>
               </div>
 
-              <div class="perf-card" data-metric="battery">
+              <div class="perf-card has-ring" data-metric="memory">
+                <div class="pc-head"><span class="pc-lbl">MEMORY</span><span class="pc-unit" id="perf-mem-src">— / 6.0 GB</span></div>
+                <div class="pc-ring">
+                  <svg viewBox="0 0 88 88" width="88" height="88">
+                    <circle cx="44" cy="44" r="36" fill="none" stroke="#1d1d1d" stroke-width="6"/>
+                    <circle class="pc-ring-arc" cx="44" cy="44" r="36" fill="none" stroke="currentColor" stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="226.19" stroke-dashoffset="226.19"
+                            transform="rotate(-90 44 44)"/>
+                  </svg>
+                  <div class="pc-ring-val" id="perf-mem">—</div>
+                </div>
+              </div>
+
+              <div class="perf-card thermal-card" data-metric="thermal">
+                <div class="pc-head"><span class="pc-lbl">THERMAL</span><span class="pc-unit">STATE</span></div>
+                <div class="thermal-stack">
+                  <div class="pc-val pc-val-sm" id="perf-thermal">—</div>
+                  <div class="thermal-track">
+                    <span class="ts" data-state="nominal"></span>
+                    <span class="ts" data-state="fair"></span>
+                    <span class="ts" data-state="serious"></span>
+                    <span class="ts" data-state="critical"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="perf-card has-ring" data-metric="battery">
                 <div class="pc-head"><span class="pc-lbl">BATTERY</span><span class="pc-unit" id="perf-batt-state">UNPLUGGED</span></div>
-                <div class="pc-val" id="perf-batt">—</div>
-                <div class="pc-bar"><span></span></div>
-                <div class="pc-src">UIDevice</div>
+                <div class="pc-ring">
+                  <svg viewBox="0 0 88 88" width="88" height="88">
+                    <circle cx="44" cy="44" r="36" fill="none" stroke="#1d1d1d" stroke-width="6"/>
+                    <circle class="pc-ring-arc" cx="44" cy="44" r="36" fill="none" stroke="currentColor" stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="226.19" stroke-dashoffset="226.19"
+                            transform="rotate(-90 44 44)"/>
+                  </svg>
+                  <div class="pc-ring-val" id="perf-batt">—</div>
+                </div>
               </div>
 
-              <div class="perf-card" data-metric="disk">
-                <div class="pc-head"><span class="pc-lbl">DISK FREE</span><span class="pc-unit">GB</span></div>
-                <div class="pc-val" id="perf-disk">—</div>
-                <div class="pc-bar"><span></span></div>
-                <div class="pc-src" id="perf-disk-src">— / 128 GB</div>
+              <div class="perf-card has-ring" data-metric="disk">
+                <div class="pc-head"><span class="pc-lbl">DISK FREE</span><span class="pc-unit" id="perf-disk-src">— / 128 GB</span></div>
+                <div class="pc-ring">
+                  <svg viewBox="0 0 88 88" width="88" height="88">
+                    <circle cx="44" cy="44" r="36" fill="none" stroke="#1d1d1d" stroke-width="6"/>
+                    <circle class="pc-ring-arc" cx="44" cy="44" r="36" fill="none" stroke="currentColor" stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="226.19" stroke-dashoffset="226.19"
+                            transform="rotate(-90 44 44)"/>
+                  </svg>
+                  <div class="pc-ring-val" id="perf-disk">—</div>
+                </div>
               </div>
 
-              <div class="perf-card" data-metric="cores">
+              <div class="perf-card has-ring" data-metric="cores">
                 <div class="pc-head"><span class="pc-lbl">CORES</span><span class="pc-unit">ACTIVE</span></div>
-                <div class="pc-val" id="perf-cores">—</div>
-                <div class="pc-bar"><span></span></div>
-                <div class="pc-src">activeProcessorCount</div>
+                <div class="pc-ring">
+                  <svg viewBox="0 0 88 88" width="88" height="88">
+                    <circle cx="44" cy="44" r="36" fill="none" stroke="#1d1d1d" stroke-width="6"/>
+                    <circle class="pc-ring-arc" cx="44" cy="44" r="36" fill="none" stroke="currentColor" stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="226.19" stroke-dashoffset="226.19"
+                            transform="rotate(-90 44 44)"/>
+                  </svg>
+                  <div class="pc-ring-val compact" id="perf-cores">—</div>
+                </div>
               </div>
 
             </div>
@@ -216,24 +514,61 @@
 
             </div>
 
-            <!-- ─── NETWORK & DEVICE ─── -->
-            <div class="perf-section-title">— NETWORK &amp; DEVICE</div>
+            <!-- ─── NETWORK ─── -->
+            <div class="perf-section-title">— NETWORK</div>
             <div class="perf-info">
               <div class="info-row">
-                <span class="info-k">Network</span>
+                <span class="info-k">Connection</span>
                 <span class="info-v" id="perf-net">—</span>
               </div>
               <div class="info-row">
-                <span class="info-k">Cellular</span>
+                <span class="info-k">Cellular tech</span>
                 <span class="info-v" id="perf-cell">—</span>
               </div>
+            </div>
+
+            <!-- ─── DEVICE INFO ─── -->
+            <div class="perf-section-title">— DEVICE INFO</div>
+            <div class="perf-info">
               <div class="info-row">
-                <span class="info-k">Carrier</span>
-                <span class="info-v" id="perf-carrier">—</span>
+                <span class="info-k">Model</span>
+                <span class="info-v" id="perf-device">—</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">Chip</span>
+                <span class="info-v" id="perf-chip">—</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">iOS version</span>
+                <span class="info-v" id="perf-ios">—</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">RAM</span>
+                <span class="info-v" id="perf-ram">— GB</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">Storage</span>
+                <span class="info-v" id="perf-storage-total">— GB</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">CPU cores</span>
+                <span class="info-v" id="perf-cpu-cores">— / —</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">Display</span>
+                <span class="info-v" id="perf-display">—</span>
               </div>
               <div class="info-row">
                 <span class="info-k">Refresh rate</span>
                 <span class="info-v" id="perf-refresh">— Hz</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">Locale</span>
+                <span class="info-v" id="perf-locale">—</span>
+              </div>
+              <div class="info-row">
+                <span class="info-k">Time zone</span>
+                <span class="info-v" id="perf-tz">—</span>
               </div>
               <div class="info-row">
                 <span class="info-k">Low power mode</span>
@@ -242,14 +577,6 @@
               <div class="info-row">
                 <span class="info-k">Uptime</span>
                 <span class="info-v" id="perf-uptime">—</span>
-              </div>
-              <div class="info-row">
-                <span class="info-k">Device</span>
-                <span class="info-v" id="perf-device">—</span>
-              </div>
-              <div class="info-row">
-                <span class="info-k">iOS</span>
-                <span class="info-v" id="perf-ios">—</span>
               </div>
             </div>
 
@@ -301,23 +628,27 @@
 
         <!-- ━━━ TAB · SETTINGS ━━━ -->
         <div class="tab-panel" data-tab="settings">
+          <div class="tab-header">
+            <div class="th-title">
+              <span class="th-name">settings</span>
+              <span class="th-sub">preferences · v0.1.0</span>
+            </div>
+          </div>
           <div class="settings-wrap">
 
-            <div class="settings-head">
-              <div class="ph-left">
-                <span class="ph-k">settings</span>
-                <span class="ph-cat">PREFERENCES · v0.1.0</span>
-              </div>
-            </div>
-
+            <!-- APPEARANCE -->
             <div class="set-section">
               <div class="set-section-title">— APPEARANCE</div>
               <div class="set-row">
                 <div class="set-row-meta">
-                  <div class="set-name">Animations</div>
-                  <div class="set-desc">live ticks, transitions, pulses</div>
+                  <div class="set-name">Theme</div>
+                  <div class="set-desc">color scheme</div>
                 </div>
-                <label class="toggle"><input type="checkbox" id="set-anim" checked><span></span></label>
+                <div class="seg" id="set-theme">
+                  <button class="on" data-theme="dark">DARK</button>
+                  <button data-theme="midnight">MIDNIGHT</button>
+                  <button data-theme="paper">PAPER</button>
+                </div>
               </div>
               <div class="set-row">
                 <div class="set-row-meta">
@@ -326,41 +657,168 @@
                 </div>
                 <label class="toggle"><input type="checkbox" id="set-compact"><span></span></label>
               </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Show category tags</div>
+                  <div class="set-desc">DEVICE, WEATHER, etc. on each row</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-cat-tags" checked><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Reduce motion</div>
+                  <div class="set-desc">turn off pulses and transitions</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-reduce-motion"><span></span></label>
+              </div>
             </div>
 
+            <!-- UNITS & FORMATS -->
+            <div class="set-section">
+              <div class="set-section-title">— UNITS &amp; FORMATS</div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Temperature</div>
+                  <div class="set-desc">used for weather widgets</div>
+                </div>
+                <div class="seg" id="set-temp-unit">
+                  <button class="on" data-unit="C">°C</button>
+                  <button data-unit="F">°F</button>
+                </div>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Distance</div>
+                  <div class="set-desc">workouts, distance widgets</div>
+                </div>
+                <div class="seg" id="set-distance-unit">
+                  <button class="on" data-unit="km">KM</button>
+                  <button data-unit="mi">MI</button>
+                </div>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Time</div>
+                  <div class="set-desc">12 or 24 hour clock</div>
+                </div>
+                <div class="seg" id="set-time-fmt">
+                  <button data-fmt="12">12H</button>
+                  <button class="on" data-fmt="24">24H</button>
+                </div>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Currency</div>
+                  <div class="set-desc">crypto + portfolio widgets</div>
+                </div>
+                <div class="seg" id="set-currency">
+                  <button class="on" data-cur="USD">USD</button>
+                  <button data-cur="EUR">EUR</button>
+                  <button data-cur="GBP">GBP</button>
+                  <button data-cur="PHP">PHP</button>
+                </div>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">First day of week</div>
+                  <div class="set-desc">stats and weekly views</div>
+                </div>
+                <div class="seg" id="set-week-start">
+                  <button class="on" data-day="mon">MON</button>
+                  <button data-day="sun">SUN</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- NOTIFICATIONS -->
+            <div class="set-section">
+              <div class="set-section-title">— NOTIFICATIONS</div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Allow notifications</div>
+                  <div class="set-desc">required for skills + alerts</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-notify" checked><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Sounds</div>
+                  <div class="set-desc">play chime when triggered</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-sounds"><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Haptics</div>
+                  <div class="set-desc">subtle taps for events</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-haptics" checked><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Quiet hours</div>
+                  <div class="set-desc">silence non-critical alerts</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-quiet"><span></span></label>
+              </div>
+            </div>
+
+            <!-- PRIVACY -->
+            <div class="set-section">
+              <div class="set-section-title">— PRIVACY</div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Share usage analytics</div>
+                  <div class="set-desc">help improve the app</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-analytics"><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Crash reports</div>
+                  <div class="set-desc">send anonymized diagnostics</div>
+                </div>
+                <label class="toggle"><input type="checkbox" id="set-crashes" checked><span></span></label>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Health access</div>
+                  <div class="set-desc">grants for HealthKit reads</div>
+                </div>
+                <button class="ghost-btn" id="set-health">REQUEST</button>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">App permissions</div>
+                  <div class="set-desc">opens this app's settings page</div>
+                </div>
+                <button class="ghost-btn" id="set-location">OPEN</button>
+              </div>
+            </div>
+
+            <!-- DATA -->
             <div class="set-section">
               <div class="set-section-title">— DATA</div>
               <div class="set-row">
                 <div class="set-row-meta">
-                  <div class="set-name">Refresh rate</div>
-                  <div class="set-desc">how often metrics update</div>
+                  <div class="set-name">iCloud sync</div>
+                  <div class="set-desc">sync designs + skills across devices</div>
                 </div>
-                <div class="seg" id="set-refresh">
-                  <button data-rate="500">0.5s</button>
-                  <button class="on" data-rate="1000">1s</button>
-                  <button data-rate="2000">2s</button>
-                </div>
+                <label class="toggle"><input type="checkbox" id="set-icloud" checked><span></span></label>
               </div>
               <div class="set-row">
                 <div class="set-row-meta">
-                  <div class="set-name">Live data</div>
-                  <div class="set-desc">simulate metrics stream</div>
+                  <div class="set-name">Backup now</div>
+                  <div class="set-desc">last backup 2 days ago</div>
                 </div>
-                <label class="toggle"><input type="checkbox" id="set-live" checked><span></span></label>
+                <button class="ghost-btn" id="set-backup">BACKUP</button>
               </div>
-            </div>
-
-            <div class="set-section">
-              <div class="set-section-title">— ISLAND</div>
               <div class="set-row">
                 <div class="set-row-meta">
-                  <div class="set-name">Default size</div>
-                  <div class="set-desc">used on first load</div>
+                  <div class="set-name">Export settings</div>
+                  <div class="set-desc">download as JSON</div>
                 </div>
-                <div class="seg" id="set-default-size">
-                  <button class="on" data-size="short">SHORT</button>
-                  <button data-size="long">LONG</button>
-                </div>
+                <button class="ghost-btn" id="set-export">EXPORT</button>
               </div>
               <div class="set-row">
                 <div class="set-row-meta">
@@ -369,8 +827,16 @@
                 </div>
                 <button class="ghost-btn" id="set-reset">RESET</button>
               </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Clear all customizations</div>
+                  <div class="set-desc">colors, edits, favorites</div>
+                </div>
+                <button class="ghost-btn danger" id="set-clear">CLEAR</button>
+              </div>
             </div>
 
+            <!-- ABOUT -->
             <div class="set-section">
               <div class="set-section-title">— ABOUT</div>
               <div class="set-row static">
@@ -387,6 +853,27 @@
                 </div>
                 <div class="set-static-val" id="set-design-count">—</div>
               </div>
+              <div class="set-row static">
+                <div class="set-row-meta">
+                  <div class="set-name">Storage used</div>
+                  <div class="set-desc">localStorage footprint</div>
+                </div>
+                <div class="set-static-val" id="set-storage-used">— KB</div>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Send feedback</div>
+                  <div class="set-desc">tell us what to improve</div>
+                </div>
+                <button class="ghost-btn" id="set-feedback">EMAIL</button>
+              </div>
+              <div class="set-row">
+                <div class="set-row-meta">
+                  <div class="set-name">Terms &amp; privacy</div>
+                  <div class="set-desc">read the legal stuff</div>
+                </div>
+                <button class="ghost-btn" id="set-terms">VIEW</button>
+              </div>
             </div>
 
             <div class="settings-spacer"></div>
@@ -398,7 +885,15 @@
 
       <!-- ━━━ Bottom tab bar ━━━ -->
       <nav class="tabbar" id="tabbar">
-        <button class="tab on" data-tab="island">
+        <button class="tab on" data-tab="dashboard">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="5"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="10" width="8" height="11"/></svg>
+          <span>Dashboard</span>
+        </button>
+        <button class="tab" data-tab="skills">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          <span>Skills</span>
+        </button>
+        <button class="tab" data-tab="island">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="8" rx="4"/><circle cx="17" cy="12" r="1.2" fill="currentColor"/></svg>
           <span>Island</span>
         </button>
@@ -416,6 +911,38 @@
   </div>
 
 </div>
+
+<!-- ━━━ Export modal ━━━ -->
+<div class="modal" id="export-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <div class="modal-head">
+      <div class="ph-left">
+        <span class="ph-k" id="export-name">—</span>
+        <span class="ph-cat" id="export-cat">EXPORT CODE</span>
+      </div>
+      <button class="modal-close" data-close aria-label="close">×</button>
+    </div>
+
+    <div class="modal-tabs" id="export-tabs">
+      <button class="mt on" data-lang="swiftui">SwiftUI</button>
+      <button class="mt" data-lang="activitykit">ActivityKit</button>
+      <button class="mt" data-lang="html">HTML</button>
+    </div>
+
+    <div class="modal-body">
+      <pre class="code-block"><code id="export-code">—</code></pre>
+    </div>
+
+    <div class="modal-foot">
+      <button class="ghost-btn" data-close>CLOSE</button>
+      <button class="apply-btn" id="copy-btn">COPY</button>
+    </div>
+  </div>
+</div>
+
+<!-- ━━━ Toast ━━━ -->
+<div class="toast" id="toast" aria-hidden="true"></div>
 
 <script src="app.js"></script>
 </body>
